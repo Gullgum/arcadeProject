@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if room == room0{
-
+	if (keyboard_check(ord("Z")) || keyboard_check(ord("X"))) gotomenu();
 	var key_advance = keyboard_check_pressed(ord("Z"));
 	var key_skip = undefined;
 
@@ -30,7 +30,7 @@ if room == rm_menu{
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_set_font(fnt_title);
-	draw_text(512,110,"Title")
+	draw_text(512,110,"Seven")
 	draw_set_font(fnt_med);
 	draw_text(512, 290, "New Game")
 }
