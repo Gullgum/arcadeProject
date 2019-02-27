@@ -1,1 +1,1 @@
-room_goto(rm_menu);
+fademenu(rm_menu,c_black,0.02);
