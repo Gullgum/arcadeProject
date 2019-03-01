@@ -12,6 +12,6 @@ if keyboard_check_pressed(vk_f4){
 
 if room == rm_menu{
 	if action && !instance_exists(obj_fademenu) && !instance_exists(obj_fade) {
-		fademenu(rm_1,c_black,0.02);
+		fademenu(room0,c_black,0.02);
 	}
 }
