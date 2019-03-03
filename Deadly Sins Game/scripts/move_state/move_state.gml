@@ -19,6 +19,8 @@ if (place_meeting(x+hspd, y, obj_wall)){
 		x += sign(hspd);
 	}
 	hspd = 0;
+	image_speed = 0;
+	image_index = 0;
 }
 
 x += hspd;
@@ -30,6 +32,8 @@ if (place_meeting(x, y+vspd, obj_wall)){
 		y += sign(vspd);
 	}
 	vspd = 0;
+	image_speed = 0;
+	image_index = 0;
 }
 
 y += vspd;
@@ -47,13 +51,12 @@ if (len == spd) {
 }*/
 
 /// Sprites
-image_speed = 0.5;
+image_speed = 1.5;
 if (len == 0) {
 	image_index = 0;
 }
 
 // Get Direction
-/*
 switch(face) {
 	case 0:
 		sprite_index = RIGHT;

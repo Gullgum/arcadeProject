@@ -11,7 +11,18 @@ if keyboard_check_pressed(vk_f4){
 }
 
 if room == rm_menu{
-	if action && !instance_exists(obj_fademenu) && !instance_exists(obj_fade) {
+	if (dGUI && gy < 3) {
+	    if gy == 1 gy++;
+		gy++;
+	}
+	if (uGUI && gy > 1){
+		if gy == 3 gy--;
+		gy--;
+	}
+	if gy == 1 && action && !instance_exists(obj_fademenu) && !instance_exists(obj_fade) {
 		fademenu(room0,c_black,0.02);
+	}
+	if gy == 3 && action && !instance_exists(obj_fademenu) && !instance_exists(obj_fade) {
+		fademenu(rm_ctrl,c_black,0.1);
 	}
 }

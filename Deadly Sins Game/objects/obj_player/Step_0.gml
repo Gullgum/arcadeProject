@@ -2,11 +2,14 @@
 // You can write your code in this editor
 get_input();
 depth = -y;
-if keyboard_check_pressed(vk_f4){
-	var full = window_get_fullscreen();
-	switch (full){
-		case 1: window_set_fullscreen(0); break;
-		case 0: window_set_fullscreen(1); break;
+//fullscreen
+if room != rm_1{
+	if keyboard_check_pressed(vk_f4){
+		var full = window_get_fullscreen();
+		switch (full){
+			case 1: window_set_fullscreen(0); break;
+			case 0: window_set_fullscreen(1); break;
+		}
 	}
 }
 //Movement

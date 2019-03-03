@@ -6,6 +6,9 @@ uKey = max(keyboard_check(vk_up), keyboard_check(ord("W")), 0);
 pauseKey = (keyboard_check(vk_escape));
 action = max(keyboard_check_pressed(ord("Z")), (keyboard_check_pressed(vk_enter)));
 menuKey = (keyboard_check_pressed(ord("C")));
+skipKey = keyboard_check_pressed(ord("X"))
+dGUI = (keyboard_check_pressed(vk_down));
+uGUI = (keyboard_check_pressed(vk_up));
 xaxis = (rKey - lKey);
 yaxis = (dKey - uKey);
 

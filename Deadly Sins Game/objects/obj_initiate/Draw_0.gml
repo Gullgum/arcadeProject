@@ -3,7 +3,7 @@
 get_input();
 
 if room == room0{
-	if ((keyboard_check_pressed(ord("X"))) || action) && (!instance_exists(obj_fade)) && (!instance_exists(obj_fademenu)) fademenu(rm_1,c_black,0.02);
+	if ((keyboard_check_pressed(ord("X"))) || action)/* && (!instance_exists(obj_fade)) && (!instance_exists(obj_fademenu))*/ fademenu(rm_1,c_black,0.02);
 	var key_advance = keyboard_check_pressed(ord("Z"));
 	var key_skip = undefined;
 
@@ -29,14 +29,27 @@ if room == room0{
 }
 
 if room == rm_menu{
+	
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_set_font(fnt_title);
 	draw_text(512,110,"Seven")
 	draw_set_font(fnt_med);
+	if gy == 1 draw_set_colour(c_yellow) else draw_set_colour(c_white);
 	draw_text(512, 290, "New Game");
-	draw_set_color($b6b7ba);
+	if gy == 2 draw_set_colour(c_yellow) else draw_set_color($b6b7ba);
 	draw_text(512, 360, "Continue");
-	draw_set_color(c_white);
+	if gy == 3 draw_set_colour(c_yellow) else draw_set_colour(c_white);
 	draw_text(512, 430, "Controls");
+}
+
+if room == rm_ctrl{
+	
+	draw_set_color(c_white);
+	draw_set_font(fnt_med);
+	draw_set_halign(fa_left);
+	draw_text(120,50,"Controls \n------------------------------------ \nUse arrow keys to move\nZ - Interact with objects, Select, \n      Progress dialogue\nX - Cancel, Go back, Skip dialogue text\nC - Open/close menu\nPress F4 to toggle fullscreen mode\n\n------------------------------------\n\nPress X to return to menu");
+	if skipKey {
+		fademenu(rm_menu,c_black,0.1);	
+	}
 }
