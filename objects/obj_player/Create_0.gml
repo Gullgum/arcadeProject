@@ -1,6 +1,6 @@
 
 /// @desc Intialize
-spd = 8;
+spd = 10;
 hspd = 0;
 vspd = 0;
 len = 0;
