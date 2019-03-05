@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "0cf9b9bf-f4fd-4773-8baa-c9d17e02ba1c",
+            "Value": {
+                "id": "e4c2b886-a869-4902-959f-e4b0c2678768",
+                "resourcePath": "objects\\obj_textbox\\obj_textbox.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "11d06438-321d-4154-bf85-4b0900dc5208",
             "Value": {
                 "id": "2e9b1baf-5c6f-487f-bad4-c1f3ab0fdfc4",
@@ -98,7 +106,7 @@
             "Key": "40794127-f995-451b-8552-8ac3b1490cd1",
             "Value": {
                 "id": "c31dad88-7d18-417f-8550-80615068cc03",
-                "resourcePath": "fonts\\font0\\font0.yy",
+                "resourcePath": "fonts\\fnt_text\\fnt_text.yy",
                 "resourceType": "GMFont"
             }
         },
@@ -140,6 +148,14 @@
                 "id": "0aa299c4-c737-4e59-9338-fe586550066d",
                 "resourcePath": "sprites\\spr_player\\spr_player.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5669779a-7d5d-411a-80dc-a3e596ce53f3",
+            "Value": {
+                "id": "56cf0f62-0d2f-4ce0-b019-7f3a04c4e980",
+                "resourcePath": "objects\\obj_sign\\obj_sign.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -251,6 +267,14 @@
             "Value": {
                 "id": "5eea327e-5584-459c-af7e-5f6a09c7422b",
                 "resourcePath": "sprites\\spr_room\\spr_room.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "981deb46-407f-4db7-8427-53994d6cd318",
+            "Value": {
+                "id": "122a4976-16d7-4ef0-98b2-522720f8326b",
+                "resourcePath": "sprites\\spr_sign\\spr_sign.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -403,6 +427,14 @@
             "Value": {
                 "id": "f3130c6c-e985-44cb-b5c0-be43b7a43bfe",
                 "resourcePath": "fonts\\fnt_startsmall\\fnt_startsmall.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "e4e4d9cc-756e-4928-af26-a41fb5666867",
+            "Value": {
+                "id": "2552afd1-a90c-4b05-94d1-fc061c8f0659",
+                "resourcePath": "fonts\\font0\\font0.yy",
                 "resourceType": "GMFont"
             }
         },
