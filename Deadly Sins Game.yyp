@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "ee85b7a0-5d3d-462f-9758-371ecd46dcbb",
+            "Value": {
+                "id": "295d0280-2de9-4924-9e9c-232be080c234",
+                "resourcePath": "sprites\\spr_hall_proper\\spr_hall_proper.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fc1f02d4-1fcd-4046-bf3d-93b0c6014671",
             "Value": {
                 "id": "4b7fa785-8664-4507-9fb2-86473f3bacd1",
