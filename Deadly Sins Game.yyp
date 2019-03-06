@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "2f60f304-047b-4c1c-951f-5c74d0afc047",
+            "Value": {
+                "id": "602f04f0-24bd-471a-ab3c-b8862f9ca257",
+                "resourcePath": "sprites\\spr_room_proper\\spr_room_proper.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3433fdb6-ecfa-45cf-b6af-b12b6f74353f",
             "Value": {
                 "id": "e6cb3959-57a8-40f4-9071-a2254e9a1c56",
