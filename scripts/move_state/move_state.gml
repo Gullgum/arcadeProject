@@ -51,7 +51,7 @@ if (len == spd) {
 }*/
 
 /// Sprites
-image_speed = 1.5;
+image_speed = 2;
 if (len == 0) {
 	image_index = 0;
 }
