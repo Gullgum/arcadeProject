@@ -198,6 +198,7 @@
                 "resourceType": "GMSprite"
             }
         },
+
         {
             "Key": "69d064f9-8d30-450d-acf8-86e67a85be0c",
             "Value": {
@@ -244,14 +245,6 @@
                 "id": "a612b88b-ba30-4448-af0e-383cd5a11109",
                 "resourcePath": "rooms\\rm_ini\\rm_ini.yy",
                 "resourceType": "GMRoom"
-            }
-        },
-        {
-            "Key": "74014321-ec93-46cb-b68a-40ca3f5c6db4",
-            "Value": {
-                "id": "5a6a1a1a-c95e-4172-bc0a-d752bd8bd66a",
-                "resourcePath": "objects\\obj_desk\\obj_desk.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -558,14 +551,6 @@
                 "id": "d5198811-7c1b-446c-baac-0453a85963bd",
                 "resourcePath": "views\\e8e0c677-9522-4c65-ad65-a727a3fb06db.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "ee30f2d9-d6ad-4635-a58f-c6b82672be60",
-            "Value": {
-                "id": "44d32f84-10b3-4386-953e-020c6fb9e064",
-                "resourcePath": "objects\\obj_bed\\obj_bed.yy",
-                "resourceType": "GMObject"
             }
         },
         {
