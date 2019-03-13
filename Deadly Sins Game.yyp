@@ -87,14 +87,6 @@
             }
         },
         {
-            "Key": "341f86c3-096c-4c7c-a964-fb4ca9bd6a69",
-            "Value": {
-                "id": "fd0d6fbf-5e78-47c5-baf8-12d1aa376050",
-                "resourcePath": "sprites\\spr_living_room\\spr_living_room.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "3433fdb6-ecfa-45cf-b6af-b12b6f74353f",
             "Value": {
                 "id": "e6cb3959-57a8-40f4-9071-a2254e9a1c56",
@@ -207,14 +199,6 @@
             }
         },
         {
-            "Key": "5fdedbde-c105-453b-8591-b3695203ec57",
-            "Value": {
-                "id": "c169250b-850a-4cae-9174-cf8f52743acf",
-                "resourcePath": "rooms\\rm_3\\rm_3.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "69d064f9-8d30-450d-acf8-86e67a85be0c",
             "Value": {
                 "id": "d0b1a64b-ed18-4224-ba0b-ed4805cc675b",
@@ -286,14 +270,7 @@
                 "resourceType": "GMSprite"
             }
         },
-        {
-            "Key": "8365576d-011a-4b9d-b7f5-c242c78b8f46",
-            "Value": {
-                "id": "53116729-f167-4e99-9524-1297252ae952",
-                "resourcePath": "sprites\\spr_desk\\spr_desk.yy",
-                "resourceType": "GMSprite"
-            }
-        },
+
         {
             "Key": "86f0419c-11a3-42d6-b21f-f14ed18d9204",
             "Value": {
@@ -510,14 +487,7 @@
                 "resourceType": "GMSprite"
             }
         },
-        {
-            "Key": "d80d99f0-1b01-41ef-b293-69aeedb60a2c",
-            "Value": {
-                "id": "034ed130-7105-43b8-90c6-c5b763614e8f",
-                "resourcePath": "sprites\\spr_bed\\spr_bed.yy",
-                "resourceType": "GMSprite"
-            }
-        },
+
         {
             "Key": "db550858-7bd8-4cd3-bd10-9bec84386206",
             "Value": {
