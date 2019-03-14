@@ -1,18 +1,18 @@
 {
-    "id": "9028473f-5f6f-4da3-82d1-116173bcc4a6",
+    "id": "75a8096b-85ba-4b28-a5d2-9b8742d339dd",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "obj_bed",
     "eventList": [
         {
-            "id": "d5e44534-ffa7-4394-8442-d1cf76e74280",
+            "id": "47d777a2-f2bf-4003-b145-8d4fd7ac29da",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "9028473f-5f6f-4da3-82d1-116173bcc4a6"
+            "m_owner": "75a8096b-85ba-4b28-a5d2-9b8742d339dd"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",

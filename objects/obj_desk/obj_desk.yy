@@ -1,18 +1,18 @@
 {
-    "id": "c28127c5-8558-47a9-88ab-b04ab94d332b",
+    "id": "55daa4b1-2032-43cb-ae4e-0b05c3747052",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "obj_desk",
     "eventList": [
         {
-            "id": "e4b446e0-fc57-49dc-92f9-3b21c6b2950a",
+            "id": "73f0880f-6986-4e53-9544-f9a31364f708",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "c28127c5-8558-47a9-88ab-b04ab94d332b"
+            "m_owner": "55daa4b1-2032-43cb-ae4e-0b05c3747052"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
