@@ -13,7 +13,7 @@ if room != rm_1{
 	}
 }
 //Movement
-if !instance_exists(obj_fade) && !instance_exists(obj_fademenu){
+if !instance_exists(obj_fade) && !instance_exists(obj_fademenu) && !instance_exists(obj_textbox){
 	script_execute(state);
 }else{
 	image_index = 0;
