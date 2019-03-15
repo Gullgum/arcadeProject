@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_3",
+    "name": "rm_living_room",
     "id": "5fdedbde-c105-453b-8591-b3695203ec57",
     "creationCodeFile": "",
     "inheritCode": false,
