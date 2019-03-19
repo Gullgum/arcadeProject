@@ -26,7 +26,6 @@
         "943d6b3c-cb98-44fb-a185-67d7349c6e93",
         "801bf243-f243-4650-a150-59184fcbbc10",
         "2c24c891-35c7-4e45-b25a-534cedf192d7",
-        "bbcba530-3ec2-4541-bf55-5692522176b8",
         "3d70e9e9-b998-4cc0-a436-cef3c4d398b2"
     ],
     "IsDnD": false,
@@ -173,7 +172,7 @@
     "viewSettings":     {
         "id": "68de0104-7f07-4293-b91f-f957d2670835",
         "clearDisplayBuffer": true,
-        "clearViewBackground": false,
+        "clearViewBackground": true,
         "enableViews": true,
         "inheritViewSettings": false,
         "modelName": "GMRoomViewSettings",
