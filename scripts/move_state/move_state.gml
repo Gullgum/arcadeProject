@@ -1,5 +1,10 @@
 /// move_state
 // Get Direction
+if keyboard_check(ord("X")) {
+	spd = 20;
+}else{
+	spd = 10;
+}
 dir = point_direction(0, 0, xaxis, yaxis);
 // Get Length
 if (xaxis == 0) && (yaxis == 0) {
@@ -51,7 +56,7 @@ if (len == spd) {
 }*/
 
 /// Sprites
-image_speed = 2;
+image_speed = (spd / 5);
 if (len == 0) {
 	image_index = 0;
 }
