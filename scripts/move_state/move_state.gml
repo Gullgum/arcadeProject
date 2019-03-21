@@ -24,8 +24,10 @@ if (place_meeting(x+hspd, y, obj_wall)){
 		x += sign(hspd);
 	}
 	hspd = 0;
+	if vspd = 0{
 	image_speed = 0;
 	image_index = 0;
+	}
 }
 
 x += hspd;
@@ -37,8 +39,10 @@ if (place_meeting(x, y+vspd, obj_wall)){
 		y += sign(vspd);
 	}
 	vspd = 0;
+	if hspd = 0 {
 	image_speed = 0;
 	image_index = 0;
+	}
 }
 
 y += vspd;

@@ -48,7 +48,7 @@ if room == rm_ctrl{
 	draw_set_color(c_white);
 	draw_set_font(fnt_med);
 	draw_set_halign(fa_left);
-	draw_text(120,50,"Controls \n------------------------------------ \nUse arrow keys to move\nZ - Interact with objects, Select, \n      Progress dialogue\nX - Cancel, Go back, Skip dialogue text\nC - Open/close menu\nPress F4 to toggle fullscreen mode\n\n------------------------------------\n\nPress X to return to menu");
+	draw_text(120,50,"Controls \n------------------------------------ \nUse arrow keys to move\nZ - Interact with objects, Select, \n      Progress dialogue\nX - Cancel, Go back, Skip dialogue text, \n		       Run (hold)\nC - Open/close menu\nPress F4 to toggle fullscreen mode\n------------------------------------\n\nPress X to return to menu");
 	if skipKey {
 		fademenu(rm_menu,c_black,0.1);	
 	}
