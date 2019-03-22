@@ -6,7 +6,7 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 127,
+    "bbox_bottom": 223,
     "bbox_left": 0,
     "bbox_right": 1023,
     "bbox_top": 0,
@@ -36,45 +36,27 @@
                     "LayerId": "ba8b1fe1-79fa-4fe4-a10b-b8698294b06b"
                 },
                 {
-                    "id": "307f2c8c-30c0-4417-a416-ae074711dbbf",
+                    "id": "08d2ff87-4447-4540-a510-300e15e6654b",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
                     "FrameId": "a2978cff-6340-4733-8a53-98e56f763b23",
-                    "LayerId": "09915336-f36b-4674-81f8-9bc1a8c7f6dc"
-                },
-                {
-                    "id": "1284dad2-a165-4f51-b730-db43ca756481",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "a2978cff-6340-4733-8a53-98e56f763b23",
-                    "LayerId": "42488fe1-4a8a-4661-96bc-41d7055804f6"
+                    "LayerId": "0c7b1ef6-da82-4a0d-a9f5-d2d4df99dbf6"
                 }
             ]
         }
     ],
-    "gridX": 16,
-    "gridY": 16,
-    "height": 128,
+    "gridX": 1,
+    "gridY": 9,
+    "height": 224,
     "layers": [
         {
-            "id": "42488fe1-4a8a-4661-96bc-41d7055804f6",
+            "id": "0c7b1ef6-da82-4a0d-a9f5-d2d4df99dbf6",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
             "SpriteId": "ed6e85f6-4114-49a5-b07a-25dcb5ad4b9f",
             "blendMode": 0,
             "isLocked": false,
-            "name": "Layer 2",
-            "opacity": 100,
-            "visible": true
-        },
-        {
-            "id": "09915336-f36b-4674-81f8-9bc1a8c7f6dc",
-            "modelName": "GMImageLayer",
-            "mvc": "1.0",
-            "SpriteId": "ed6e85f6-4114-49a5-b07a-25dcb5ad4b9f",
-            "blendMode": 0,
-            "isLocked": false,
-            "name": "Layer 1",
+            "name": "Layer 2 (2)",
             "opacity": 100,
             "visible": true
         },
