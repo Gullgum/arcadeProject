@@ -18,4 +18,6 @@ if !instance_exists(obj_fade) && !instance_exists(obj_fademenu) && !instance_exi
 }else{
 	image_index = 0;
 }
-
+if rKey||lKey||uKey||dKey{
+audio_play_sound(stepsound,5,false);
+}
