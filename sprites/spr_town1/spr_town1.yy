@@ -6,7 +6,7 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 223,
+    "bbox_bottom": 319,
     "bbox_left": 0,
     "bbox_right": 1023,
     "bbox_top": 0,
@@ -41,13 +41,20 @@
                     "mvc": "1.0",
                     "FrameId": "a2978cff-6340-4733-8a53-98e56f763b23",
                     "LayerId": "0c7b1ef6-da82-4a0d-a9f5-d2d4df99dbf6"
+                },
+                {
+                    "id": "c9c4eff0-ac89-4acf-91e0-be885cde800f",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "a2978cff-6340-4733-8a53-98e56f763b23",
+                    "LayerId": "11397b4d-f468-48b3-8848-d0a77f7a24c6"
                 }
             ]
         }
     ],
     "gridX": 16,
     "gridY": 16,
-    "height": 224,
+    "height": 320,
     "layers": [
         {
             "id": "0c7b1ef6-da82-4a0d-a9f5-d2d4df99dbf6",
@@ -57,6 +64,17 @@
             "blendMode": 0,
             "isLocked": false,
             "name": "Layer 2 (2)",
+            "opacity": 100,
+            "visible": true
+        },
+        {
+            "id": "11397b4d-f468-48b3-8848-d0a77f7a24c6",
+            "modelName": "GMImageLayer",
+            "mvc": "1.0",
+            "SpriteId": "ed6e85f6-4114-49a5-b07a-25dcb5ad4b9f",
+            "blendMode": 0,
+            "isLocked": false,
+            "name": "Grass",
             "opacity": 100,
             "visible": true
         },

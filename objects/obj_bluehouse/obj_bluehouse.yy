@@ -1,18 +1,18 @@
 {
-    "id": "41a39b82-dde0-42f6-b3a7-19908ad7273b",
+    "id": "fea01342-b875-4cf0-87a8-43ccbbe14381",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_palletfence",
+    "name": "obj_bluehouse",
     "eventList": [
         {
-            "id": "3865a181-336d-4eea-a0b9-29c2eb9fdaf1",
+            "id": "24b23333-6120-4b70-affb-179f0b344c0d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "41a39b82-dde0-42f6-b3a7-19908ad7273b"
+            "m_owner": "fea01342-b875-4cf0-87a8-43ccbbe14381"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -33,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "82ee68e7-60c1-46d1-851f-ace7f3ac72be",
+    "spriteId": "cc403e50-11ed-47f4-b178-18c437ed6457",
     "visible": true
 }
