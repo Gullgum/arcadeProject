@@ -19,3 +19,13 @@ if !instance_exists(obj_fade) && !instance_exists(obj_fademenu) && !instance_exi
 	image_index = 0;
 }
 
+if (rKey||lKey||uKey||dKey) && stepcooldown = 0{
+	audio_sound_pitch(stepsound, random_range(0.8,1.5));
+	audio_play_sound(stepsound,5,false);
+	stepcooldown = 1;
+	if spd = 20{
+		alarm[0] = 7.5;
+	}else{
+		alarm[0] = 15;
+	}
+}

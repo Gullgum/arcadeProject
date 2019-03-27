@@ -22,4 +22,4 @@ draw_set_font(fnt_text);
 draw_set_halign(fa_left);
 var key_advance = action;
 var key_skip = skipKey;
-draw_text_scrolling(130, textboxY + 30,text,30,770,1,6,key_advance,key_skip,script);
+draw_text_scrolling(130, textboxY + 20,text,40,770,1,6,key_advance,key_skip,script);

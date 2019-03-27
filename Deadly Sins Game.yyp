@@ -335,6 +335,14 @@
             }
         },
         {
+            "Key": "7c25cf08-9d49-443e-b31f-ce7ae70d62d9",
+            "Value": {
+                "id": "add89c69-529a-40f6-8145-9b3fd98e3dfc",
+                "resourcePath": "objects\\obj_newsstand\\obj_newsstand.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7cc9c26d-9502-4a44-a769-9c9b56de119e",
             "Value": {
                 "id": "8a5d9d90-59f3-4f3f-9514-0d9d52ce5669",
@@ -439,6 +447,14 @@
             }
         },
         {
+            "Key": "95c530de-6d42-4ce8-9891-9cc1b208d681",
+            "Value": {
+                "id": "55ded034-e55d-4724-b7ba-c26ad62fb0c2",
+                "resourcePath": "sounds\\stepsound\\stepsound.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "961dad77-904d-4e05-8aa7-e19a2e4cd090",
             "Value": {
                 "id": "b368800b-95e6-4dfc-bee2-f51d33b97028",
@@ -487,6 +503,14 @@
             }
         },
         {
+            "Key": "9f9a06c2-bab0-40a6-b682-3e3490e0e061",
+            "Value": {
+                "id": "f9c2865a-52f8-4b78-a858-7374906f418f",
+                "resourcePath": "sprites\\sprite23\\sprite23.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a041d1f9-00ee-44d0-8ad1-6d5669a001e2",
             "Value": {
                 "id": "4eb38a8f-93b3-4fc5-8587-3a25a2672da1",
@@ -500,6 +524,14 @@
                 "id": "1b3972a7-3c30-48b6-bc9f-76ad9b0e689b",
                 "resourcePath": "objects\\obj_tree\\obj_tree.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a30e1127-5a61-4b4a-8cfe-67ccf5610c63",
+            "Value": {
+                "id": "52c6d81e-a522-4247-9d61-becaf737b1ae",
+                "resourcePath": "sprites\\spr_newsstand\\spr_newsstand.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -723,6 +755,14 @@
             "Value": {
                 "id": "295d0280-2de9-4924-9e9c-232be080c234",
                 "resourcePath": "sprites\\spr_hall_proper\\spr_hall_proper.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f4300423-fb3c-4a99-b594-ff56b66eea38",
+            "Value": {
+                "id": "c0d92816-88f7-4e49-8298-91465ad0af14",
+                "resourcePath": "sprites\\sprite24\\sprite24.yy",
                 "resourceType": "GMSprite"
             }
         },

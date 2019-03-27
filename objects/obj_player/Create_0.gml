@@ -8,6 +8,7 @@ dir = 0;
 MenuOn = 0;
 can_move = 1;
 state = move_state;
+stepcooldown = 0;
 
 // Sprite Variables
 
