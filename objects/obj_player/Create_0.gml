@@ -9,7 +9,11 @@ MenuOn = 0;
 can_move = 1;
 state = move_state;
 stepcooldown = 0;
-
+cutscene = 0;
+camera_x = camera_get_view_x(view_camera[0]);
+camera_y = camera_get_view_y(view_camera[0]);
+default_cam = camera_create_view(x - 512,y - 384, view_wport[0], view_hport[0], 0, obj_player, -1, -1, 512, 384);
+view_camera[0] = default_cam;
 // Sprite Variables
 
 face = 0;

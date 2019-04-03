@@ -61,7 +61,7 @@ if (len == spd) {
 
 /// Sprites
 image_speed = (spd / 5);
-if (len == 0) {
+if (len == 0) && cutscene == 0 {
 	image_index = 0;
 }
 
