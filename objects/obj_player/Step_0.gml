@@ -13,9 +13,9 @@ if room != rm_1{
 	}
 }
 //Movement
-if timeline_running == 0 && !instance_exists(obj_fade) && !instance_exists(obj_fademenu) && !instance_exists(obj_textbox){
+if cutscene == 0 && !instance_exists(obj_fade) && !instance_exists(obj_fademenu) && !instance_exists(obj_textbox){
 	script_execute(state);
-}else if timeline_running == 0{
+}else if cutscene == 0{
 	if view_camera[0] != default_cam{
 		view_camera[0] = default_cam;
 	}
