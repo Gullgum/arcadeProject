@@ -21,8 +21,13 @@ if room == rm_menu{
 	}
 	if gy == 1 && action && !instance_exists(obj_fademenu) && !instance_exists(obj_fade) {
 		fademenu(room0,c_black,0.02);
+		audio_sound_gain(mus_menu,0,2000);
 	}
 	if gy == 3 && action && !instance_exists(obj_fademenu) && !instance_exists(obj_fade) {
 		fademenu(rm_ctrl,c_black,0.1);
+	}
+	if !audio_is_playing(mus_menu) {
+		audio_play_sound(mus_menu,1,1);
+		audio_sound_gain(mus_menu,1,500);
 	}
 }

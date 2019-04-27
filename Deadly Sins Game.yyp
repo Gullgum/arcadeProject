@@ -615,6 +615,14 @@
             }
         },
         {
+            "Key": "b27602bc-6985-48cd-86b5-d52b17f27c88",
+            "Value": {
+                "id": "94119bb0-34ca-42cb-9fca-0011731ea5a1",
+                "resourcePath": "sounds\\mus_menu\\mus_menu.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b38d359a-5033-40ae-90c5-b9a0db567edc",
             "Value": {
                 "id": "21eafa6f-3af3-4036-8aae-74324c09f33f",
