@@ -22,7 +22,7 @@ if cutscene == 0 && !instance_exists(obj_fade) && !instance_exists(obj_fademenu)
 	image_index = 0;
 }
 
-if (room = rm_4) && (rKey||lKey||uKey||dKey) && stepcooldown = 0{
+if (room = rm_4) && !timeline_running && (rKey||lKey||uKey||dKey) && stepcooldown = 0{
 	audio_sound_pitch(stepsound, random_range(0.8,1.5));
 	audio_play_sound(stepsound,5,false);
 	stepcooldown = 1;
