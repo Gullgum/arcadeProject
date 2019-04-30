@@ -30,6 +30,10 @@ if room == room0{
 
 if room == rm_menu{
 	
+	draw_set_color(c_black);
+	draw_set_alpha(0.6);
+	draw_rectangle(300,90,730,580,0);
+	draw_set_alpha(1);
 	draw_set_color(c_white);
 	draw_set_halign(fa_center);
 	draw_set_font(fnt_title);
