@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "4109650a-2814-4da4-98ee-d06f9a85b9f8",
+            "Value": {
+                "id": "07ff80e8-bb39-498f-ab90-07d61c0b37bd",
+                "resourcePath": "objects\\obj_streetlight\\obj_streetlight.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "41a39b82-dde0-42f6-b3a7-19908ad7273b",
             "Value": {
                 "id": "b7bd8366-01ea-438f-82fd-38b553b7c42d",
@@ -876,6 +884,14 @@
                 "id": "4b7fa785-8664-4507-9fb2-86473f3bacd1",
                 "resourcePath": "scripts\\get_face\\get_face.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fcfd97b9-73b8-456c-98a4-a275f68ff5c5",
+            "Value": {
+                "id": "2e2286f1-7743-4160-8033-831274130765",
+                "resourcePath": "sprites\\spr_streetlight\\spr_streetlight.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
