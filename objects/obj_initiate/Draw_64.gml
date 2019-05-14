@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+/// @description Insert description here
+// You can write your code in this editor
 get_input();
 
 if room == room0{
@@ -29,8 +31,9 @@ if room == room0{
 }
 
 if room == rm_menu{
+	
 	draw_set_color(c_black);
-	draw_set_alpha(0.3);
+	draw_set_alpha(0.6);
 	draw_rectangle(300,90,730,580,0);
 	draw_set_alpha(1);
 	draw_set_color(c_white);
