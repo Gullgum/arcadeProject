@@ -7,3 +7,7 @@ with obj_dozer{
 	direction = 180;
 	speed = 5;
 }
+with obj_jim{
+	direction = 180;
+	speed = 5;
+}

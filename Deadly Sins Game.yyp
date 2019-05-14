@@ -407,6 +407,14 @@
             }
         },
         {
+            "Key": "7f69d9f9-8246-4f64-afdd-902f40e3ae65",
+            "Value": {
+                "id": "8710be1b-a7ec-436f-9169-68038977cb86",
+                "resourcePath": "sprites\\spr_jimbulldozer\\spr_jimbulldozer.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "82183232-d244-4940-a34e-8ce9206593af",
             "Value": {
                 "id": "cb047b04-d5f0-4916-a3ac-8602778e8a5d",
