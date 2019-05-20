@@ -45,9 +45,22 @@ var skip = argument[8];
 var script = argument[9];
 
 //Checks if script is false or is a script.
+if (doFace==false){
+	doFace = undefined;
+}
+
+if (sound==false){
+	sound = undefined;
+}
+	
+if (speaker==false){
+	speaker = undefined;
+}
+
 if (script==false){
 	script = undefined;
 }
+
 
 //Defines a temporary character variables to keep track on text position.
 //Checks if character variable has not been defined.
@@ -56,6 +69,7 @@ if !variable_instance_exists(id,"textChar"){
 	textPos = 0; //The position in the text list.
 	textCut = ""; //The text to cut out of the width factor of the string.
 	textWait = 0; //The wait timer when the text reaches a comma or period.
+	tFace = 0;
 }
 
 //Defines the text being drawn.
@@ -63,6 +77,7 @@ var drawText = "";
 
 //Gets the index of the text list.
 currentText = ds_list_find_value(text,textPos);
+
 
 //Adds the character position of the current text to the displayed text.
 if (currentText!=undefined){
@@ -88,15 +103,40 @@ if (currentText!=undefined){
 	textChar = undefined;
 	textWait = undefined;
 	textCut = undefined;
+	instance_destroy(obj_textface);
 	instance_destroy();
 }
 
 //Draws the text showing on screen one character at a time.
 if (currentText!=undefined){
 	drawText = string_copy(currentText,1,floor(textChar));
-	draw_text_ext(xpos,ypos,drawText,space,width);
-}
+	var txpos = xpos;
+	/*if doFace != undefined{
+		txpos = xpos + 150;
+	}*/
+	draw_text_ext(txpos,ypos,drawText,space,width);
 
+}
+/*
+//Draws the face
+if currentText!=undefined{
+	if doFace != undefined{
+		var facexPos = (camera_get_view_x(view_camera[0]) + xpos);
+		var faceyPos = (camera_get_view_y(view_camera[0]) + ypos);
+		if !instance_exists(obj_textface){ 		
+			tFace = instance_create_depth(facexPos,faceyPos + 100,0,obj_textface);
+		}
+
+		tFace.sprite_index = doFace;
+	}
+	
+	if (sound != false) && (!(textChar>=string_length(currentText))){
+		if !audio_is_playing(sound){
+			audio_play_sound(sound,1,0);
+		}
+	}
+}
+*/
 //Checks if the current text is not undefined.
 if (currentText!=undefined){
 	//Advances the text to the next index in the list.

@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "3b9d2b17-c71e-4ff9-b909-909125d1dd5a",
+            "Value": {
+                "id": "ce77cfb5-03bb-49fd-8785-a1020ed9d43b",
+                "resourcePath": "sprites\\spr_jimface\\spr_jimface.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3bdb4d05-3d9a-4d6d-b415-2bb2c419c91e",
             "Value": {
                 "id": "56fdf6c3-2836-48d0-90ee-bebc0a6d9e15",
@@ -343,6 +351,14 @@
             }
         },
         {
+            "Key": "6f6cd0cf-7ea1-42f7-a320-83e36336c21b",
+            "Value": {
+                "id": "82d40764-f8f6-4a42-ae3e-8dac62b1203f",
+                "resourcePath": "views\\6f6cd0cf-7ea1-42f7-a320-83e36336c21b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6f825008-f74d-43fb-84af-4703ebb988af",
             "Value": {
                 "id": "f793b2a1-273f-409f-b3c4-e921f6a1076d",
@@ -364,6 +380,14 @@
                 "id": "8588c017-05fe-4814-acd8-43483c70e2c2",
                 "resourcePath": "sprites\\spr_balconyfence\\spr_balconyfence.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "723d9d19-a2b3-4c34-bc5f-4df2c685ac56",
+            "Value": {
+                "id": "6cc9f504-1129-43b7-8395-4b74fc4fecc4",
+                "resourcePath": "objects\\obj_textface\\obj_textface.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -823,6 +847,14 @@
             }
         },
         {
+            "Key": "e6072253-dfa9-453e-9971-f9ec0b67b88a",
+            "Value": {
+                "id": "9a13c5c0-a47a-46c4-a078-4775dbabcd2f",
+                "resourcePath": "sprites\\spr_jim\\spr_jim.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e7402a6b-eeff-48c0-8cf7-d98c3c41fd9b",
             "Value": {
                 "id": "d3d15fac-5751-41f7-b8e8-a0d1d0c883e6",
@@ -850,7 +882,7 @@
             "Key": "ebd46d26-e59b-4866-9a50-1ca631a03081",
             "Value": {
                 "id": "29171191-b82f-4647-8e2f-577064959b6f",
-                "resourcePath": "sprites\\spr_jim\\spr_jim.yy",
+                "resourcePath": "sprites\\spr_jimwalk\\spr_jimwalk.yy",
                 "resourceType": "GMSprite"
             }
         },

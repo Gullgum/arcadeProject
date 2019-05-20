@@ -3,5 +3,8 @@
 signY = 0;
 
 //key_skip = 0;
-script = 0;
+script = false;
+sound = false;
+speaker = false;
+doFace = false;
 message[0] = "Whoops.";

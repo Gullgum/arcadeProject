@@ -2,6 +2,8 @@
 // You can write your code in this editor
 get_input();
 depth = -y;
+//Return to menu
+if keyboard_check_pressed(vk_decimal) room = rm_ini;
 //fullscreen
 if room != rm_1{
 	if keyboard_check_pressed(vk_f4){
@@ -15,6 +17,10 @@ if room != rm_1{
 //Movement
 if cutscene == 0 && !instance_exists(obj_fade) && !instance_exists(obj_fademenu) && !instance_exists(obj_textbox){
 	script_execute(state);
+}
+
+if instance_exists(obj_textbox){
+	image_index = 0;
 }
 
 if (room = rm_4) && !timeline_running && (rKey||lKey||uKey||dKey) && stepcooldown = 0{
