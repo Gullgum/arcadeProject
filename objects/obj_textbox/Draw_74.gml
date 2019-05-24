@@ -22,4 +22,10 @@
 	draw_set_halign(fa_left);
 	var key_advance = action;
 	var key_skip = skipKey;
-	draw_text_scrolling(130, textboxY + 20,text,40,770,1,6,key_advance,key_skip,script);
+	var twidth = 0;
+	if doFace != 0 {
+		twidth = 770;
+	}else{
+		twidth = 660;
+	}
+	draw_text_scrolling(130, textboxY + 20,text,40,twidth,1,6,key_advance,key_skip,doFace,speaker,script);

@@ -29,6 +29,12 @@
 ///@param skip?
 //A boolean variable to tell the text to speed up and not scroll. (ex. keyboard_check(vk_space))
 
+///@param doFace
+//Which face to draw
+
+///@param speaker
+
+
 ///@param script?
 //A script to execute after the text if over. (Script without brackets for execute or FALSE for no script.)
 
@@ -42,17 +48,19 @@ var spd = argument[5];
 var wait = argument[6];
 var advance = argument[7];
 var skip = argument[8];
-var script = argument[9];
+var doFace = argument[9];
+var speaker = argument[10];
+var script = argument[11];
 
 //Checks if script is false or is a script.
 if (doFace==false){
 	doFace = undefined;
 }
 
-if (sound==false){
+/*if (sound==false){
 	sound = undefined;
-}
-	
+}*/
+
 if (speaker==false){
 	speaker = undefined;
 }
@@ -69,7 +77,7 @@ if !variable_instance_exists(id,"textChar"){
 	textPos = 0; //The position in the text list.
 	textCut = ""; //The text to cut out of the width factor of the string.
 	textWait = 0; //The wait timer when the text reaches a comma or period.
-	tFace = 0;
+	sprIndex = 0; //The index of the talking sprite
 }
 
 //Defines the text being drawn.
@@ -111,32 +119,36 @@ if (currentText!=undefined){
 if (currentText!=undefined){
 	drawText = string_copy(currentText,1,floor(textChar));
 	var txpos = xpos;
-	/*if doFace != undefined{
-		txpos = xpos + 150;
-	}*/
+	if doFace != undefined{
+		txpos = xpos + 120;
+	}
+	
 	draw_text_ext(txpos,ypos,drawText,space,width);
 
 }
-/*
+
 //Draws the face
+//Be careful when using while loops
 if currentText!=undefined{
 	if doFace != undefined{
-		var facexPos = (camera_get_view_x(view_camera[0]) + xpos);
-		var faceyPos = (camera_get_view_y(view_camera[0]) + ypos);
-		if !instance_exists(obj_textface){ 		
-			tFace = instance_create_depth(facexPos,faceyPos + 100,0,obj_textface);
+			if !(textChar>=string_length(currentText)){
+				draw_sprite(doFace,floor(sprIndex), xpos - 10, ypos);
+				sprIndex += 0.3;
+			}else{
+				draw_sprite(doFace,0,xpos - 10,ypos);
+			}
 		}
-
-		tFace.sprite_index = doFace;
-	}
-	
-	if (sound != false) && (!(textChar>=string_length(currentText))){
-		if !audio_is_playing(sound){
-			audio_play_sound(sound,1,0);
+	if speaker != undefined{
+		if !(textChar>=string_length(currentText)){
+			speaker.sprite_index = speaker.sprTalk;
+			speaker.image_speed = 1.5
+		}else{ 
+			speaker.image_speed = 0;
+			speaker.image_index = 0;
 		}
 	}
 }
-*/
+
 //Checks if the current text is not undefined.
 if (currentText!=undefined){
 	//Advances the text to the next index in the list.

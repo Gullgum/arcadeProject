@@ -3,7 +3,10 @@
 get_input();
 depth = -y;
 //Return to menu
-if keyboard_check_pressed(vk_decimal) room = rm_ini;
+if keyboard_check_pressed(ord("L")) {
+	room_goto(0);
+	instance_destroy();
+}
 //fullscreen
 if room != rm_1{
 	if keyboard_check_pressed(vk_f4){
