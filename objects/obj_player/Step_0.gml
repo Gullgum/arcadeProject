@@ -3,8 +3,8 @@
 get_input();
 depth = -y;
 //Return to menu
-if keyboard_check_pressed(ord("L")){
-	room_goto(rm_ini);
+if keyboard_check_pressed(ord("L")) {
+	room_goto(0);
 	instance_destroy();
 }
 //fullscreen

@@ -1,12 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 	get_input();
-
+//Add message array values to a list
 	var text = ds_list_create();
 	for (var i = 0; i < array_length_1d(message); i++){
 		ds_list_add(text, message[i]);
 	}
-
+//Add doFace array values to a list
+	var faces = ds_list_create();
+	var arrayLen = array_length_1d(doFace);
+	for (var i = 0; i < array_length_1d(message); i++){
+		if i > (arrayLen){
+			doface[i] = doface[arrayLen];
+		}
+		ds_list_add(faces, doFace[i]);
+	}
 	if obj_player.y > signY {
 		textboxY = 30;
 	}else textboxY = 575;
@@ -22,4 +30,10 @@
 	draw_set_halign(fa_left);
 	var key_advance = action;
 	var key_skip = skipKey;
-	draw_text_scrolling(130, textboxY + 20,text,40,770,1,6,key_advance,key_skip,script);
+	var twidth = 0;
+	if doFace != 0 {
+		twidth = 770;
+	}else{
+		twidth = 660;
+	}
+	draw_text_scrolling(130, textboxY + 20,text,40,twidth,1,6,key_advance,key_skip,faces,speaker,script);

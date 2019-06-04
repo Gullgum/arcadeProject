@@ -6,5 +6,5 @@ signY = 0;
 script = false;
 sound = false;
 speaker = false;
-doFace = false;
+doFace[0] = false;
 message[0] = "Whoops.";
