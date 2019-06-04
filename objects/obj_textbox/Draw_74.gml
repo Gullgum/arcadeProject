@@ -10,8 +10,8 @@
 	var faces = ds_list_create();
 	var arrayLen = array_length_1d(doFace);
 	for (var i = 0; i < array_length_1d(message); i++){
-		if i > (arrayLen){
-			doface[i] = doface[arrayLen];
+		if i >= (arrayLen){
+			doFace[i] = doFace[arrayLen-1];
 		}
 		ds_list_add(faces, doFace[i]);
 	}
@@ -30,10 +30,5 @@
 	draw_set_halign(fa_left);
 	var key_advance = action;
 	var key_skip = skipKey;
-	var twidth = 0;
-	if doFace != 0 {
-		twidth = 770;
-	}else{
-		twidth = 660;
-	}
+	var twidth = 770;
 	draw_text_scrolling(130, textboxY + 20,text,40,twidth,1,6,key_advance,key_skip,faces,speaker,script);

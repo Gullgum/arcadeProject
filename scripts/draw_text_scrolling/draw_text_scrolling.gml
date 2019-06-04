@@ -127,6 +127,7 @@ if (currentText!=undefined){
 	var txpos = xpos;
 	if currentFace != undefined{
 		txpos = xpos + 120;
+		width -= 100;
 	}
 	
 	draw_text_ext(txpos,ypos,drawText,space,width);

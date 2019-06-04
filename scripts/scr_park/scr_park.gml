@@ -17,7 +17,5 @@ box.doFace[1] = false;
 box.doface[2] = spr_jimface;
 box.doFace[3] = false;
 box.doFace[4] = spr_jimface;
-box.doFace[5] = spr_jimface;
-box.doFace[6] = spr_jimface;
 var scr = scr_pantoplayer;
 box.script = scr;

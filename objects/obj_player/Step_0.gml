@@ -4,8 +4,7 @@ get_input();
 depth = -y;
 //Return to menu
 if keyboard_check_pressed(ord("L")) {
-	room_goto(0);
-	instance_destroy();
+	game_restart();
 }
 //fullscreen
 if room != rm_1{
