@@ -4,7 +4,7 @@ get_input();
 if action && (distance_to_object(obj_player) < 40) && !instance_exists(obj_textbox) {
 	var box = instance_create_depth(x,y,0,obj_textbox);
 			box.script = script;
-			box.doFace = doFace;
+			//box.doFace = doFace;
 			box.sound = sound;
 			box.speaker = speaker;
 		

@@ -10,5 +10,10 @@ box.message[3] = "This land now belongs to me! Jim Capitalist!";
 box.message[4] = "Heheheheheheheheheheheheheheheh!"
 box.message[5] = "Toodles!";
 box.message[6] = "(This is all we've done so far. To return to the menu, press \"L\".)";
+
+box.doFace[0] = spr_jimface;
+box.doFace[1] = false;
+box.doface[2] = spr_jimface;
+box.doFace[3] = false;
 var scr = scr_pantoplayer;
 box.script = scr;

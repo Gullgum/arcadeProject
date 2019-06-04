@@ -1,12 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 	get_input();
-
+//Add message array values to a list
 	var text = ds_list_create();
 	for (var i = 0; i < array_length_1d(message); i++){
 		ds_list_add(text, message[i]);
 	}
-
+//Add doFace array values to a list
+	var faces = ds_list_create();
+	var arrayLen = array_length_1d(doFace);
+	for (var i = 0; i < array_length_1d(message); i++){
+		if i > arrayLen {
+			doface[i] = doface[arrayLen];
+		}
+		ds_list_add(faces, doFace[i]);
+	}
 	if obj_player.y > signY {
 		textboxY = 30;
 	}else textboxY = 575;
