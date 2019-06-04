@@ -1,4 +1,4 @@
-///@description Draws text scrolling across the screen.
+ ///@description Draws text scrolling across the screen.
 
 //Created by Kupoapo#6969 (Aka. Xenodev)
 

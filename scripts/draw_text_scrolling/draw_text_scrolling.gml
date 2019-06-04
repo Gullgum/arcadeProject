@@ -45,6 +45,7 @@ var skip = argument[8];
 var script = argument[9];
 
 //Checks if script is false or is a script.
+/*
 if (doFace==false){
 	doFace = undefined;
 }
@@ -56,7 +57,7 @@ if (sound==false){
 if (speaker==false){
 	speaker = undefined;
 }
-
+*/
 if (script==false){
 	script = undefined;
 }

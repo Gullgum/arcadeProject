@@ -7,6 +7,6 @@ box.message[2] = "Oh! Don't you worry, boy...";
 box.message[3] = "This land now belongs to me! Jim Capitalist!";
 box.message[4] = "Heheheheheheheheheheheheheheheh!"
 box.message[5] = "Toodles!";
-box.message[6] = "(This is all we've done so far. To return to the menu, press \">\".)";
+box.message[6] = "(This is all we've done so far. To return to the menu, press \"L\".)";
 var scr = scr_pantoplayer;
 box.script = scr;
