@@ -35,6 +35,8 @@
 ///@param speaker
 //Which object/character is speaking for animations etc.
 
+///@param sounds
+//Which sounds to play, if any.
 
 ///@param script?
 //A script to execute after the text if over. (Script without brackets for execute or FALSE for no script.)
@@ -51,15 +53,10 @@ var advance = argument[7];
 var skip = argument[8];
 var faces = argument[9];
 var speaker = argument[10];
-var script = argument[11];
+var sounds = argument[11];
+var script = argument[12];
 
 //Checks if script is false or is a script.
-
-
-
-/*if (sound==false){
-	sound = undefined;
-}*/
 
 if (speaker==false){
 	speaker = undefined;
@@ -78,6 +75,7 @@ if !variable_instance_exists(id,"textChar"){
 	textCut = ""; //The text to cut out of the width factor of the string.
 	textWait = 0; //The wait timer when the text reaches a comma or period.
 	facePos = 0; //The positon in the faces list
+	soundPos = 0; //The position in the sounds list.
 	sprIndex = 0; //The index of the talking sprite
 }
 
@@ -87,9 +85,14 @@ var drawText = "";
 //Gets the index of the text list.
 currentText = ds_list_find_value(text,textPos);
 currentFace = ds_list_find_value(faces,facePos);
+currentSound = ds_list_find_value(sounds,soundPos);
 
 if (currentFace==false){
 	currentFace = undefined;
+}
+
+if (currentSound==false){
+	currentSound = undefined;
 }
 
 //Adds the character position of the current text to the displayed text.
@@ -118,6 +121,7 @@ if (currentText!=undefined){
 	textCut = undefined;
 	sprIndex = undefined;
 	facePos = undefined;
+	soundPos = undefined;
 	instance_destroy();
 }
 
@@ -129,7 +133,6 @@ if (currentText!=undefined){
 		txpos = xpos + 120;
 		width -= 100;
 	}
-	
 	draw_text_ext(txpos,ypos,drawText,space,width);
 
 }
@@ -137,6 +140,12 @@ if (currentText!=undefined){
 //Draws the face
 //Be careful when using while loops
 if currentText!=undefined{
+	if (currentSound != undefined){
+		if !(audio_exists(currentSound)) && !(textChar>=string_length(currentText)) {
+			audio_sound_gain(stepsound,1,0);
+			audio_play_sound(currentSound,1,0);
+		}
+	}
 	if currentFace != undefined{
 			if !(textChar>=string_length(currentText)){
 				draw_sprite(currentFace,floor(sprIndex), xpos - 10, ypos);
@@ -144,6 +153,7 @@ if currentText!=undefined{
 			}else{
 				draw_sprite(currentFace,0,xpos - 10,ypos);
 			}
+			
 		}
 	if speaker != undefined{
 		if !(textChar>=string_length(currentText)){
@@ -162,6 +172,7 @@ if (currentText!=undefined){
 	if (advance) && (textChar>=string_length(currentText)){
 		textPos++;
 		facePos++;
+		soundPos++;
 		textChar = 0;
 		textCut = "";
 		textWait = 0;

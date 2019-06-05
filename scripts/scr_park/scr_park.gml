@@ -14,8 +14,10 @@ box.message[6] = "(This is all we've done so far. To return to the menu, press \
 
 box.doFace[0] = spr_jimface;
 box.doFace[1] = false;
-box.doface[2] = spr_jimface;
+box.doFace[2] = spr_jimface;
 box.doFace[3] = false;
 box.doFace[4] = spr_jimface;
+
+box.tSound[0] = stepsound;
 var scr = scr_pantoplayer;
 box.script = scr;

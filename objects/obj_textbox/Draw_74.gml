@@ -15,6 +15,16 @@
 		}
 		ds_list_add(faces, doFace[i]);
 	}
+	var sounds = ds_list_create();
+	var sArrayLen = array_length_1d(tSound);
+	for (var i = 0; i < array_length_1d(message); i++){
+		if i >= sArrayLen{
+			tSound[i] = tSound[sArrayLen-1]
+		}
+		ds_list_add(sounds, tSound[i]);
+	}
+			
+	
 	if obj_player.y > signY {
 		textboxY = 30;
 	}else textboxY = 575;
@@ -31,4 +41,4 @@
 	var key_advance = action;
 	var key_skip = skipKey;
 	var twidth = 770;
-	draw_text_scrolling(130, textboxY + 20,text,40,twidth,1,6,key_advance,key_skip,faces,speaker,script);
+	draw_text_scrolling(130, textboxY + 20,text,40,twidth,1,6,key_advance,key_skip,faces,speaker,sounds,script);

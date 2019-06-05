@@ -3,5 +3,5 @@
 message[0] = "lamo";
 script = false;
 doFace[0] = false;
-sound = false;
+tSound = false;
 speaker = false;
