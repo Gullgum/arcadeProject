@@ -35,7 +35,7 @@
 ///@param speaker
 //Which object/character is speaking for animations etc.
 
-///@param sounds
+///@param sound
 //Which sounds to play, if any.
 
 ///@param script?
@@ -140,10 +140,12 @@ if (currentText!=undefined){
 //Draws the face
 //Be careful when using while loops
 if currentText!=undefined{
+	draw_text(0,0,string(currentSound));
 	if (currentSound != undefined){
-		if !(audio_exists(currentSound)) && !(textChar>=string_length(currentText)) {
-			audio_sound_gain(stepsound,1,0);
+		if !audio_is_playing(currentSound) && !(textChar>=string_length(currentText)) {
+			audio_sound_gain(currentSound,1,0);
 			audio_play_sound(currentSound,1,0);
+			draw_text(0,0,"I don't know man");
 		}
 	}
 	if currentFace != undefined{

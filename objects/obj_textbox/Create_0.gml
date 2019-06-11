@@ -4,8 +4,8 @@ signY = 0;
 
 //key_skip = 0;
 script = false;
-sound = false;
+//sound = false;
 speaker = false;
 doFace[0] = false;
 message[0] = "Whoops.";
-tSound[0] = stepsound;
+tSound[0] = false;

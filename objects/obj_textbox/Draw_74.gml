@@ -17,11 +17,11 @@
 	}
 	var sounds = ds_list_create();
 	var sArrayLen = array_length_1d(tSound);
-	for (var i = 0; i < array_length_1d(message); i++){
-		if i >= sArrayLen{
-			tSound[i] = tSound[sArrayLen-1]
+	for (var j = 0; j < array_length_1d(message); j++){
+		if j >= (sArrayLen){
+			tSound[j] = tSound[sArrayLen-1];
 		}
-		ds_list_add(sounds, tSound[i]);
+		ds_list_add(sounds, tSound[j]);
 	}
 			
 	
