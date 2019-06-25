@@ -1,6 +1,9 @@
 ///@description Draws text scrolling across the screen.
 
 //Created by Kupoapo#6969 (Aka. Xenodev)
+//^ Thanks Xenodev
+/*I have modified parts of this script to include things like sounds and faces, so I do have
+  some understanding of how it works.*/
 
 ///@param x
 //The x position where the text is displayed.
@@ -138,9 +141,8 @@ if (currentText!=undefined){
 }
 
 //Draws the face
-//Be careful when using while loops
+//Note to self: Be careful when using while loops or the game will get stuck.
 if currentText!=undefined{
-	draw_text(0,0,string(currentSound));
 	if (currentSound != undefined){
 		if !audio_is_playing(currentSound) && !(textChar>=string_length(currentText)) {
 			audio_sound_gain(currentSound,1,0);
@@ -148,11 +150,15 @@ if currentText!=undefined{
 			draw_text(0,0,"I don't know man");
 		}
 	}
+	//If a face has been defined and the text is still moving, draw an animated sprite.
 	if currentFace != undefined{
 			if !(textChar>=string_length(currentText)){
+				/*The floor function rounds a value down to the nearest integer, so until sprIndex
+				reaches the next whole number, the sprite's image index will remain the same.*/
 				draw_sprite(currentFace,floor(sprIndex), xpos - 10, ypos);
+				//Every frame, increase the value of sprIndex by 0.3, meaning the sprite will change 9 times a second.
 				sprIndex += 0.3;
-			}else{
+			}else{ //Otherwise draw a non-animated sprite with the first frame of the sprite.
 				draw_sprite(currentFace,0,xpos - 10,ypos);
 			}
 			
@@ -170,7 +176,7 @@ if currentText!=undefined{
 
 //Checks if the current text is not undefined.
 if (currentText!=undefined){
-	//Advances the text to the next index in the list.
+	//Advances the text, face and sound to the next index in the list.
 	if (advance) && (textChar>=string_length(currentText)){
 		textPos++;
 		facePos++;

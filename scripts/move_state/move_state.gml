@@ -1,4 +1,6 @@
 /// move_state
+/*This script is not mine, but is not copyrighted. I still don't entirely understand what it all means
+  but I have a rough idea of how it works.*/
 // Get Direction
 if keyboard_check(ord("X")) {
 	spd = 20;

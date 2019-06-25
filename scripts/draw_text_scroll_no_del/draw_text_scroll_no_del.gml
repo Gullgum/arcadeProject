@@ -1,6 +1,7 @@
  ///@description Draws text scrolling across the screen.
 
 //Created by Kupoapo#6969 (Aka. Xenodev)
+//This is just the original version of this script, except the text does not disappear at the end.
 
 ///@param x
 //The x position where the text is displayed.
