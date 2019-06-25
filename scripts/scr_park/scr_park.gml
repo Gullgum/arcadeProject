@@ -1,16 +1,12 @@
 
 /// Draw
 get_input();
+//Create a textbox under the variable "box"
 var box = instance_create_depth(x,y,0,obj_textbox);
 box.speaker = obj_jim;
 box.doFace = spr_jimface;
-box.message[0] = "Heh heh heh!";
-box.message[1] = "What do you think you're doing?!";
-box.message[2] = "Oh! Don't you worry, boy...";
-box.message[3] = "This land now belongs to me! Jim Capitalist!";
-box.message[4] = "Heheheheheheheheheheheheheheheh!"
-box.message[5] = "Toodles!";
-box.message[6] = "(This is all we've done so far. To return to the menu, press \"L\".)";
+
+box.message = ["Text1", "Text2", "Text3","Text4","...","...","Listen, kid, you better keep your nose out of MY business or you'll be in big trouble.",""];  
 
 box.doFace[0] = spr_jimface;
 box.doFace[1] = false;
@@ -21,10 +17,6 @@ box.doFace[4] = spr_jimface;
 box.tSound[0] = stepsound;
 box.tSound[1] = stepsound;
 box.tSound[2] = stepsound;
-box.tSound[3] = stepsound;
-box.tSound[4] = stepsound;
-box.tSound[5] = stepsound;
-box.tSound[6] = stepsound;
 
 var scr = scr_pantoplayer;
 box.script = scr;

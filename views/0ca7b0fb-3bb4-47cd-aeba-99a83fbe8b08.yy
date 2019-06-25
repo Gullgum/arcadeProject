@@ -10,7 +10,9 @@
         "70671689-2018-4f16-aeaa-828140d10bbd",
         "7cc9c26d-9502-4a44-a769-9c9b56de119e",
         "cc403e50-11ed-47f4-b178-18c437ed6457",
-        "a30e1127-5a61-4b4a-8cfe-67ccf5610c63"
+        "a30e1127-5a61-4b4a-8cfe-67ccf5610c63",
+        "9f9a06c2-bab0-40a6-b682-3e3490e0e061",
+        "f4300423-fb3c-4a99-b594-ff56b66eea38"
     ],
     "filterType": "GMSprite",
     "folderName": "Town",
