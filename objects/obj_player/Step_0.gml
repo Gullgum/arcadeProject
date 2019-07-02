@@ -35,3 +35,8 @@ if (room = rm_4) && !timeline_running && (rKey||lKey||uKey||dKey) && stepcooldow
 		alarm[0] = 15;
 	}
 }
+
+if (y <= 1120 && timeline_index == tml_park && timeline_running == 1) {
+	timeline_position = 210;
+	timeline_running = 1;
+}
