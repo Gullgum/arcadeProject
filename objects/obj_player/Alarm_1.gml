@@ -1,4 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
-cutscene = 0;
+
 view_camera[0] = default_cam;
+if timeline_index == tml_park {
+	timeline_running = 1;
+	timeline_position = 570;
+}
+	
