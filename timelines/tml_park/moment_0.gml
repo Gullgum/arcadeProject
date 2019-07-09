@@ -5,4 +5,4 @@ with obj_player {
 	image_index = 0;
 }
 obj_jim.cutscene = 1;
-instance_destroy(inst_6A075A1A);
+//instance_destroy(inst_6A075A1A);
