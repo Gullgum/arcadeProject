@@ -44,7 +44,12 @@ if rectH = (maxHeight){
 	draw_text_scrolling(870,685,txtFlee,10,100,0.4,1,0,0,doFaces,speakers,snds,0);
 
 	if (gx == 1 && action) menu = "Attack";
-	if (gx == 5 && action) instance_destroy(self);
+	if (gx == 5 && action){
+		var escaped = 0;
+		if random(1) <= target.escapeChance{
+			escaped = 1;
+		}
+	}
 	
 }
 break;
@@ -73,5 +78,16 @@ case "Attack":
 		
 
 break;
-
+case "Flee":
+	var fleeTxt =  ds_list_create();
+	ds_list_add(fleeTxt,"Attempting to flee...");
+	var fleeScript = 0;
+	if escaped == 1{
+		ds_list_add(fleeTxt,"You got away!");
+		fleeScript = exit_battle();
+	}else{
+		ds_list_add(fleeTxt,"Couldn't escape!");
+		fleeScript = battle_menu();
+	}
+	draw_text_scrolling(70,685,fleeTxt,500,0.4,6,action,skipKey,doFaces,speakers,snds,fleeScript);
 }
