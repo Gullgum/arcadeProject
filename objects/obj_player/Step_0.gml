@@ -17,7 +17,7 @@ if room != rm_1{
 	}
 }
 //Movement
-if cutscene == 0 && !instance_exists(obj_fade) && !instance_exists(obj_fademenu) && !instance_exists(obj_textbox){
+if !instance_exists(obj_battle) && cutscene == 0 && !instance_exists(obj_fade) && !instance_exists(obj_fademenu) && !instance_exists(obj_textbox){
 	script_execute(state);
 }
 
@@ -39,4 +39,12 @@ if (room = rm_4) && !timeline_running && (rKey||lKey||uKey||dKey) && stepcooldow
 if (y <= 1120 && timeline_index == tml_park && timeline_running == 1) {
 	timeline_position = 210;
 	timeline_running = 1;
+}
+
+if instance_exists(obj_battle){
+	if (x == targetPosX && y == targetPosY) || (distance_to_point(targetPosX,targetPosY) < speed){
+		speed = 0;
+		image_speed = 0;
+		image_index = 0;
+	}
 }

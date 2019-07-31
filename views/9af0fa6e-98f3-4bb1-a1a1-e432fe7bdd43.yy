@@ -6,7 +6,8 @@
     "children": [
         "6b4d0a3a-9401-46d2-af92-fb000f28870f",
         "d95dbeb6-2ae7-49be-a0ec-88304ebd4073",
-        "601c8bf5-fd52-4f6a-9c2c-08c4d0d986fc"
+        "601c8bf5-fd52-4f6a-9c2c-08c4d0d986fc",
+        "e35da55b-4db4-4144-b44e-22b3a7317bc2"
     ],
     "filterType": "GMScript",
     "folderName": "Cutscenes",

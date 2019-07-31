@@ -1,6 +1,6 @@
 /// move_stat;
 /*This script is not mine, but is not copyrighted. I still don't entirely understand what it all means
-  but I have a pret ty goodidea of how it works.*/
+  but I have a pretty good idea of how it works.*/
 // Get Direction
 //Max speed will be determined by whether the player is holding X (run) or not. 
 //Player will accelerate if not already at top speed. 

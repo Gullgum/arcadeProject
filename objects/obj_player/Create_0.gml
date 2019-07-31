@@ -13,7 +13,8 @@ camera_y = camera_get_view_y(view_camera[0]);
 default_cam = camera_create_view(x - 512,y - 384, view_wport[0], view_hport[0], 0, obj_player, -1, -1, 512, 384);
 view_camera[0] = default_cam;
 // Sprite Variables
-
+targetPosX = 0;
+targetPosY = 0;
 face = 0;
 
 #macro RIGHT spr_player_white;

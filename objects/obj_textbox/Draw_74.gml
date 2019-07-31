@@ -30,6 +30,15 @@ variable above, except it's for sounds. */
 		}
 		ds_list_add(sounds, tSound[j]);
 	}
+	
+	var speak = ds_list_create();
+	var xArrayLen = array_length_1d(speaker);
+	for (var j = 0; j < array_length_1d(message); j++){
+		if j >= (xArrayLen){
+			speaker[j] = speaker[xArrayLen-1];
+		}
+		ds_list_add(speak, speaker[j]);
+	}
 			
 //Draw the textbox.
 	/*If the player is above the sign object when they interact with it, change the position of the
@@ -58,4 +67,4 @@ variable above, except it's for sounds. */
 	//The maximum width before the text starts a new line.
 	var twidth = 770;
 	//Run the 'draw_text_scrolling' script using all the variables defined in this object.
-	draw_text_scrolling(130, textboxY + 20,text,40,twidth,1,6,key_advance,key_skip,faces,speaker,sounds,script);
+	draw_text_scrolling(130, textboxY + 20,text,40,twidth,1,6,key_advance,key_skip,faces,speak,sounds,script);

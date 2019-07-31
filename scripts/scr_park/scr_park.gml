@@ -3,7 +3,7 @@
 get_input();
 //Create a textbox under the variable "box"
 var box = instance_create_depth(x,y,0,obj_textbox);
-box.speaker = obj_jim;
+box.speaker = [obj_jim];
 box.doFace = spr_jimface;
 
 box.message = ["Text1", "Text2", "Text3","Text4","...","...","Listen, kid, you better keep your nose out of MY business or you'll be in big trouble.","."];  

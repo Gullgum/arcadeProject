@@ -61,9 +61,9 @@ var script = argument[12];
 
 //Checks if script is false or is a script.
 
-if (speaker==false){
+/*if (speaker==false){
 	speaker = undefined;
-}
+}*/
 
 if (script==false){
 	script = undefined;
@@ -80,6 +80,7 @@ if !variable_instance_exists(id,"textChar"){
 	facePos = 0; //The positon in the faces list
 	soundPos = 0; //The position in the sounds list.
 	sprIndex = 0; //The index of the talking sprite
+	speakerPos = 0;
 }
 
 //Defines the text being drawn.
@@ -89,6 +90,7 @@ var drawText = "";
 currentText = ds_list_find_value(text,textPos);
 currentFace = ds_list_find_value(faces,facePos);
 currentSound = ds_list_find_value(sounds,soundPos);
+currentSpeaker = ds_list_find_value(speaker,speakerPos);
 
 if (currentFace==false){
 	currentFace = undefined;
@@ -96,6 +98,10 @@ if (currentFace==false){
 
 if (currentSound==false){
 	currentSound = undefined;
+}
+
+if (currentSpeaker==false){
+	currentSpeaker = undefined;
 }
 
 //Adds the character position of the current text to the displayed text.
@@ -125,6 +131,7 @@ if (currentText!=undefined){
 	sprIndex = undefined;
 	facePos = undefined;
 	soundPos = undefined;
+	speakerPos = undefined;
 	instance_destroy();
 }
 
@@ -163,13 +170,13 @@ if currentText!=undefined{
 			}
 			
 		}
-	if speaker != undefined{
+	if currentSpeaker != undefined{
 		if !(textChar>=string_length(currentText)){
-			speaker.sprite_index = speaker.sprTalk;
-			speaker.image_speed = 1.5
+			currentSpeaker.sprite_index = currentSpeaker.sprTalk;
+			currentSpeaker.image_speed = 1.5
 		}else{ 
-			speaker.image_speed = 0;
-			speaker.image_index = 0;
+			currentSpeaker.image_speed = 0;
+			currentSpeaker.image_index = 0;
 		}
 	}
 }
@@ -181,6 +188,7 @@ if (currentText!=undefined){
 		textPos++;
 		facePos++;
 		soundPos++;
+		speakerPos++;
 		textChar = 0;
 		textCut = "";
 		textWait = 0;

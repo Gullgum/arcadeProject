@@ -5,3 +5,4 @@ script = false;
 doFace[0] = false;
 sound = false;
 speaker = false;
+
