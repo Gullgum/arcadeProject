@@ -5,3 +5,7 @@ rectH = 768;
 gx = 1;
 slideTimer = 0;
 slider = undefined;
+target = 0;
+escaped = 0;
+fleeCheck = 0;
+randomise();

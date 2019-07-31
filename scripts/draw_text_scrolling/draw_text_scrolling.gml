@@ -124,6 +124,19 @@ if (currentText!=undefined){
 		script_execute(script);
 	}
 	//Undefines all the used variables.
+
+	if instance_exists(obj_battle){
+		if obj_battle.menu = "Flee"{
+			textPos = 0;
+			textChar = 0;
+			textWait = 0;
+			textCut = 0;
+			sprIndex = 0;
+			facePos = 0;
+			soundPos = 0;
+			speakerPos = 0;
+		}
+	}else{
 	textPos = undefined;
 	textChar = undefined;
 	textWait = undefined;
@@ -132,7 +145,10 @@ if (currentText!=undefined){
 	facePos = undefined;
 	soundPos = undefined;
 	speakerPos = undefined;
-	instance_destroy();
+	if instance_exists(obj_textbox){
+		instance_destroy(obj_textbox);
+	}
+	}
 }
 
 //Draws the text showing on screen one character at a time.

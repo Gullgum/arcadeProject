@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "67e61dbf-8ead-4114-bd51-15d22b986aba",
+            "Value": {
+                "id": "b7231553-83c7-419a-a817-e313f10b4c32",
+                "resourcePath": "scripts\\set_fleeCheck\\set_fleeCheck.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6945d314-ec92-491c-a0a4-e1788d535c57",
             "Value": {
                 "id": "8f62e9e2-4f06-4d62-8153-882cb45ae165",
@@ -708,6 +716,14 @@
                 "id": "52c6d81e-a522-4247-9d61-becaf737b1ae",
                 "resourcePath": "sprites\\spr_newsstand\\spr_newsstand.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a8523801-2f81-42be-8d5c-7fe717a9ae23",
+            "Value": {
+                "id": "39fd7440-9cf7-4fa1-8a99-e172a5dfb19e",
+                "resourcePath": "scripts\\battle_menu\\battle_menu.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1077,7 +1093,9 @@
         "6b4d0a3a-9401-46d2-af92-fb000f28870f",
         "d95dbeb6-2ae7-49be-a0ec-88304ebd4073",
         "601c8bf5-fd52-4f6a-9c2c-08c4d0d986fc",
-        "e35da55b-4db4-4144-b44e-22b3a7317bc2"
+        "e35da55b-4db4-4144-b44e-22b3a7317bc2",
+        "67e61dbf-8ead-4114-bd51-15d22b986aba",
+        "a8523801-2f81-42be-8d5c-7fe717a9ae23"
     ],
     "tutorial": ""
 }
