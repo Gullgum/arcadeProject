@@ -16,11 +16,12 @@ if action && distance_to_object(obj_player) < 40 && !instance_exists(obj_battle)
 		image_speed = 0;
 		image_index = 0;
 		sprite_index = RIGHT;
+		spd = 0;
 		direction = point_direction(x,y,targetPosX,targetPosY);
-		speed = distance_to_point(targetPosX,targetPosY) / 15;
+		speed = distance_to_point(targetPosX,targetPosY) / 30;
 	}
 	direction = point_direction(x,y,camW - 100,obj_player.targetPosY);
-	speed = distance_to_point(camW - 100, obj_player.targetPosY) / 15;
+	speed = distance_to_point(camW - 100, obj_player.targetPosY) / 30;
 }
 
 if distance_to_point(camW-100,obj_player.targetPosY) < speed{

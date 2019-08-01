@@ -8,4 +8,5 @@ slider = undefined;
 target = 0;
 escaped = 0;
 fleeCheck = 0;
+sliderSpeed = 5;
 randomise();

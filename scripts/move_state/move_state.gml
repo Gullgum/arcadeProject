@@ -5,9 +5,9 @@
 //Max speed will be determined by whether the player is holding X (run) or not. 
 //Player will accelerate if not already at top speed. 
 if keyboard_check(ord("X")) {
-	spd = min(len+1.5,20);
+	spd = min(len+0.75,10);
 }else{
-	spd = min(len + 1.5,10);
+	spd = min(len + 0.75,5);
 }
 //Hold the direction value (dir) from the previous frame in a local variable.
 var dirPrev = dir;
@@ -19,7 +19,7 @@ if (xaxis == 0) && (yaxis == 0) {
 	//Set the current dir value to the previous frame's. This keeps them going in the right direction while they slow.
 	dir = dirPrev;
 	//Reduce player's speed.
-	len = (max(len-3,0));
+	len = (max(len-1.5,0));
 
 }else{
 	//If input is detected, length == speed.
@@ -84,7 +84,7 @@ if (len == spd) {
 }*/
 
 /// Sprites
-image_speed = (spd / 5);
+image_speed = (spd / 2.5);
 //If the player is not moving and there is no cutscene playing, return to the first frame of animation.
 if (len == 0) && cutscene == 0 {
 	image_index = 0;

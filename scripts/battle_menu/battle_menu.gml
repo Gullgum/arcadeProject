@@ -1,1 +1,0 @@
-obj_battle.menu = "Menu";

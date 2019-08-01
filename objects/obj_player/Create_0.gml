@@ -17,6 +17,8 @@ targetPosX = 0;
 targetPosY = 0;
 face = 0;
 
+inventory = [0,0,0,0,0,0,0,0];
+
 #macro RIGHT spr_player_white;
 
 #macro DOWN spr_player_down;

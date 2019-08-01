@@ -29,15 +29,15 @@ if (room = rm_4) && !timeline_running && (rKey||lKey||uKey||dKey) && stepcooldow
 	audio_sound_pitch(stepsound, random_range(0.8,1.5));
 	audio_play_sound(stepsound,5,false);
 	stepcooldown = 1;
-	if spd = 20{
-		alarm[0] = 7.5;
-	}else{
+	if spd = 10{
 		alarm[0] = 15;
+	}else{
+		alarm[0] = 30;
 	}
 }
 
 if (y <= 1120 && timeline_index == tml_park && timeline_running == 1) {
-	timeline_position = 210;
+	timeline_position = 420;
 	timeline_running = 1;
 }
 

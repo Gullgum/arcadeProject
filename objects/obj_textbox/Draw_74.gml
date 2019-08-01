@@ -67,4 +67,4 @@ variable above, except it's for sounds. */
 	//The maximum width before the text starts a new line.
 	var twidth = 770;
 	//Run the 'draw_text_scrolling' script using all the variables defined in this object.
-	draw_text_scrolling(130, textboxY + 20,text,40,twidth,1,6,key_advance,key_skip,faces,speak,sounds,script);
+	draw_text_scrolling(130, textboxY + 20,text,40,twidth,0.5,12,key_advance,key_skip,faces,speak,sounds,script);

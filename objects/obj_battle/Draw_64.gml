@@ -25,7 +25,7 @@ draw_rectangle(0,rectH,1024,768,0);
 draw_set_color(c_white);
 draw_rectangle(-1,rectH,1024,768,1)
 var maxHeight = 5*camH/6;
-rectH = max(rectH - 5,maxHeight);
+rectH = max(rectH - 2.5,maxHeight);
 
 
 
@@ -35,15 +35,15 @@ if rectH = (maxHeight){
 
 	
 	if (gx == 1) draw_set_color(c_yellow) else draw_set_color(c_white);
-	draw_text_scrolling(70,685,txtAtk,10,100,0.4,1,0,0,doFaces,speakers,snds,0);
+	draw_text_scrolling(70,685,txtAtk,10,100,0.2,1,0,0,doFaces,speakers,snds,0);
 	if (gx == 2) draw_set_color(c_yellow) else draw_set_color($b6b7ba);
-	draw_text_scrolling(270,685,txtMagic,10,100,0.4,1,0,0,doFaces,speakers,snds,0);
+	draw_text_scrolling(270,685,txtMagic,10,100,0.2,1,0,0,doFaces,speakers,snds,0);
 	if (gx == 3) draw_set_color(c_yellow) else draw_set_color(c_white);
-	draw_text_scrolling(470,685,txtDefend,10,100,0.4,1,0,0,doFaces,speakers,snds,0);
+	draw_text_scrolling(470,685,txtDefend,10,100,0.2,1,0,0,doFaces,speakers,snds,0);
 	if (gx == 4) draw_set_color(c_yellow) else draw_set_color(c_white);
-	draw_text_scrolling(670,685,txtItem,10,100,0.4,1,0,0,doFaces,speakers,snds,0);
+	draw_text_scrolling(670,685,txtItem,10,100,0.2,1,0,0,doFaces,speakers,snds,0);
 	if (gx == 5) draw_set_color(c_yellow) else draw_set_color(c_white);
-	draw_text_scrolling(870,685,txtFlee,10,100,0.4,1,0,0,doFaces,speakers,snds,0);
+	draw_text_scrolling(870,685,txtFlee,10,100,0.2,1,0,0,doFaces,speakers,snds,0);
 
 	if (gx == 1 && action) menu = "Attack";
 	if (gx == 5 && action){
@@ -63,7 +63,7 @@ case "Attack":
 	if !instance_exists(obj_attackslide){
 		instance_create_depth(obj_player.x + 100, obj_player.y - 270, -10, obj_slider);
 		instance_create_depth(obj_player.x + 85,obj_player.y - 267,-120,obj_attackslide);
-		obj_attackslide.spd = 10;
+		obj_attackslide.spd = sliderSpeed;
 
 	}
 	
@@ -97,12 +97,12 @@ case "Flee":
 	}
 	draw_set_color(c_white);
 	if (fleeCheck == 0)
-		draw_text_scrolling(70,685,fleeTxt,30,500,0.5,6,action,0,doFaces,speakers,snds,set_fleeCheck);
+		draw_text_scrolling(70,685,fleeTxt,30,500,0.5,12,action,0,doFaces,speakers,snds,set_fleeCheck);
 	if fleeCheck == 1{
 		if escaped == 0{
 			menu = "Menu";
 		}else if escaped == 1{
-			rectH = min(rectH+5,769);
+			rectH = min(rectH+4,769);
 			if rectH >= 769{
 				instance_destroy(self);
 			}
