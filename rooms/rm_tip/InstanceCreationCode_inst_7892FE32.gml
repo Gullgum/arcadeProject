@@ -1,0 +1,1 @@
+escapeChance = 1;

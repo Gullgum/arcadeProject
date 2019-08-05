@@ -22,8 +22,31 @@ if action && distance_to_object(obj_player) < 40 && !instance_exists(obj_battle)
 	}
 	direction = point_direction(x,y,camW - 100,obj_player.targetPosY);
 	speed = distance_to_point(camW - 100, obj_player.targetPosY) / 30;
+
 }
 
+if instance_exists(obj_battle){
+	if obj_battle.topRectH >= 128 && !instance_exists(obj_battletext) && waiting == 0{
+		var txt = instance_create_depth(0,0,-100,obj_battletext);
+		switch tutorialProgress{
+			case 0:
+				txt.message = ["Alright!\nNow, let's start with a basic attack.","Select the 'Attack' button and press 'Z'"];
+				txt.script = tutorial_increment();
+			break;	
+			
+			case 1:
+				txt.message = ["Very good!","Let's try defending.\nDon't worry, it shouldn't hurt.","(Shouldn't? ?)"];
+				txt.script = tutorial_increment();
+			break;
+			
+			case 2:
+				txt.message = ["How does a dummy do THAT?!","I have no idea!","The item menu allows you to use any items you have.\nYou'll pick those up as you go...","...But since you don't have any, we won't bother with that.","Now, see if you can beat the dummy!"];
+				txt.script = tutorial_increment();
+			break;
+		}
+		
+	}
+}
 if distance_to_point(camW-100,obj_player.targetPosY) < speed{
 	speed = 0;
 }

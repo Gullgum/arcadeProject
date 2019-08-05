@@ -125,8 +125,7 @@ if (currentText!=undefined){
 	}
 	//Undefines all the used variables.
 
-	if instance_exists(obj_battle){
-		if obj_battle.menu = "Flee"{
+	if instance_exists(obj_battle) && obj_battle.menu == "Flee"{
 			textPos = 0;
 			textChar = 0;
 			textWait = 0;
@@ -135,19 +134,21 @@ if (currentText!=undefined){
 			facePos = 0;
 			soundPos = 0;
 			speakerPos = 0;
-		}
 	}else{
-	textPos = undefined;
-	textChar = undefined;
-	textWait = undefined;
-	textCut = undefined;
-	sprIndex = undefined;
-	facePos = undefined;
-	soundPos = undefined;
-	speakerPos = undefined;
-	if instance_exists(obj_textbox){
-		instance_destroy(obj_textbox);
-	}
+		textPos = undefined;
+		textChar = undefined;
+		textWait = undefined;
+		textCut = undefined;
+		sprIndex = undefined;
+		facePos = undefined;
+		soundPos = undefined;
+		speakerPos = undefined;
+		if instance_exists(obj_textbox){
+			instance_destroy(obj_textbox);
+		}
+		if instance_exists(obj_battletext){
+			instance_destroy(obj_battletext);
+		}
 	}
 }
 

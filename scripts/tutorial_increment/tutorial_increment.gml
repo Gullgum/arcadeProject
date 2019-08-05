@@ -1,0 +1,2 @@
+tutorialProgress++;
+waiting = 1;
