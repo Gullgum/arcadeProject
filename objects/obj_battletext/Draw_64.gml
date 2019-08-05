@@ -45,7 +45,7 @@ for (var j = 0; j < array_length_1d(message); j++){
 if instance_exists(obj_battle){
 	if obj_battle.topRectH >= 128{
 		draw_set_font(fnt_text);
-		draw_text_scrolling(90, 34,text,40,600,0.5,6,action,skipKey,faces,speak,sounds,script);
+		draw_text_scrolling(90, 34,text,40,850,0.5,6,action,skipKey,faces,speak,sounds,script);
 		
 	}
 	

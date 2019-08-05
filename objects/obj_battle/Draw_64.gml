@@ -114,7 +114,7 @@ break;
 case "Defend":
 	defendTimer--;
 	if defendTimer <= 0{
-		if target == inst_7892FE32 && obj_dummy.tutorialProgress == 1{
+		if target == inst_7892FE32 && obj_dummy.tutorialProgress == 2{
 			target.waiting = 0;
 		}
 		menu = "Menu"
