@@ -30,12 +30,12 @@ if instance_exists(obj_battle){
 		var txt = instance_create_depth(0,0,-100,obj_battletext);
 		switch tutorialProgress{
 			case 0:
-				txt.message = ["Alright!\nNow, let's start with a basic attack.","Select the 'Attack' button and press 'Z'"];
+				txt.message = ["Alright!\nNow, let's start with a basic attack.","Select the 'Attack' button and press 'Z'","Try to align your attack with the dummy's body and press 'Z' again to hit it"];
 				txt.script = tutorial_increment();
 			break;	
 			
 			case 1:
-				txt.message = ["Very good!","Let's try defending.\nDon't worry, it shouldn't hurt.","(Shouldn't? ?)"];
+				txt.message = ["Very good!Remember, your damage will change depending on where your hit lands.","Now let's try defending!\nDefending reduces the amount of damage you will take.","It's quite useful if you need to buy time.","Use the arrow keys to select 'Defend' and press 'Z'.\nDon't worry, it shouldn't hurt!","(Shouldn't? ?)"];
 				txt.script = tutorial_increment();
 			break;
 			
