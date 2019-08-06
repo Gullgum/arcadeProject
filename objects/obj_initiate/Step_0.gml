@@ -10,6 +10,8 @@ if keyboard_check_pressed(vk_f4){
 	}
 }
 
+
+
 if room == rm_menu{
 	if (dGUI && gy < 3) {
 	    if gy == 1 gy++;
