@@ -3,3 +3,4 @@ with obj_jim{
 	sprite_index = spr_jim;
 	image_speed = 0;
 }
+

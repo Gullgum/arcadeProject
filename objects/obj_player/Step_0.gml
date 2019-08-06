@@ -36,8 +36,10 @@ if (room = rm_4) && !timeline_running && (rKey||lKey||uKey||dKey) && stepcooldow
 	}
 }
 
-if (y <= 1120 && timeline_index == tml_park && timeline_running == 1) {
-	timeline_position = 420;
+if (y < 1120 && timeline_index == tml_park && timeline_running == 0) {
+	y = 1121;
+	speed = 0;
+	timeline_position = 690;
 	timeline_running = 1;
 }
 

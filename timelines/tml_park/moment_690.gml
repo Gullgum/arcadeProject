@@ -5,9 +5,10 @@ with obj_player{
 }
 with obj_dozer{
 	direction = 180;
-	speed = 5;
+	speed = 2.5;
 }
 with obj_jim{
 	direction = 180;
-	speed = 5;
+	speed = 2.5;
 }
+timeline_running = 1;

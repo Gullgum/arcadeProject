@@ -181,7 +181,7 @@ if currentText!=undefined{
 				reaches the next whole number, the sprite's image index will remain the same.*/
 				draw_sprite(currentFace,floor(sprIndex), xpos - 10, ypos);
 				//Every frame, increase the value of sprIndex by 0.3, meaning the sprite will change 9 times a second.
-				sprIndex += 0.3;
+				sprIndex += 0.15;
 			}else{ //Otherwise draw a non-animated sprite with the first frame of the sprite.
 				draw_sprite(currentFace,0,xpos - 10,ypos);
 			}
