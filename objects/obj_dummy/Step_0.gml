@@ -30,17 +30,17 @@ if instance_exists(obj_battle){
 		var txt = instance_create_depth(0,0,-100,obj_battletext);
 		switch tutorialProgress{
 			case 0:
-				txt.message = ["Alright!\nNow, let's start with a basic attack.","Select the 'Attack' button and press 'Z'","Try to align your attack with the dummy's body and press 'Z' again to hit it"];
+				txt.message = ["Alright!\nNow, let's start with a basic attack.","Select the 'Attack' button and press 'Z'","Try to align your attack with the dummy's body and press 'Z' again to hit it."];
 				txt.script = tutorial_increment();
 			break;	
 			
 			case 1:
-				txt.message = ["Very good!Remember, your damage will change depending on where your hit lands.","Now let's try defending!\nDefending reduces the amount of damage you will take.","It's quite useful if you need to buy time.","Use the arrow keys to select 'Defend' and press 'Z'.\nDon't worry, it shouldn't hurt!","(Shouldn't? ?)"];
+				txt.message = ["Very good! Remember, your damage will change depending on where your hit lands.","Now let's try defending!\nDefending reduces the amount of damage you will take.","It's quite useful if you need to buy time.","Use the arrow keys to select 'Defend' and press 'Z'.\nDon't worry, it shouldn't hurt!","(Shouldn't? ?)"];
 				txt.script = tutorial_increment();
 			break;
 			
 			case 2:
-				txt.message = ["How does a dummy do THAT?!","I have no idea!","The item menu allows you to use any items you have.\nYou'll pick those up as you go...","...But since you don't have any, we won't bother with that.","Now, see if you can beat the dummy!"];
+				txt.message = ["How does a dummy do THAT?!","I have no idea! Isn't it wonderful?","The item menu allows you to use any items you have.\nYou'll pick those up as you go...","...But since you don't have any, we won't bother with that.","Now, see if you can beat the dummy!"];
 				txt.script = tutorial_increment();
 			break;
 		}
