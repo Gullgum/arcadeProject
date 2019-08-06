@@ -7,9 +7,6 @@ get_input();
 
 
 if room == room0{
-	if ((keyboard_check_pressed(ord("X"))) || action)/* && (!instance_exists(obj_fade)) && (!instance_exists(obj_fademenu))*/ fademenu(rm_1,c_black,0.02);
-	var key_advance = keyboard_check_pressed(ord("Z"));
-	var key_skip = undefined;
 	var faces = ds_list_create();
 	ds_list_add(faces,0);
 	var speakers = ds_list_create();
@@ -18,12 +15,15 @@ if room == room0{
 	ds_list_add(sounds,0);
 	var text = ds_list_create();	
 	ds_list_add(text,"I still believe that in the ashes of the \nold days, we will create a brighter world.")
+	if ((keyboard_check_pressed(ord("X"))) || action)/* && (!instance_exists(obj_fade)) && (!instance_exists(obj_fademenu))*/ fademenu(rm_1,c_black,0.02);
+	var key_advance = 0;
+	var key_skip = 0;
 	draw_set_halign(fa_center);
 	draw_set_font(font0);
 	draw_set_color(c_white);
 	draw_text_scrolling(512,250,text,40,1024,0.3,8,key_advance,key_skip,faces,speakers,sounds,false);
 	if can_alarm_0 == 1{
-		alarm[0] = 90;
+		alarm[0] = 270;
 		can_alarm_0 = 0;
 	}
 	if can_start_text == 1{
