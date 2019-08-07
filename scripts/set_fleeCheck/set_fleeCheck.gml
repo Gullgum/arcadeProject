@@ -1,1 +1,1 @@
-obj_battle.fleeCheck = 1;
+obj_battle.fleeCheckFinished = 1;

@@ -1,2 +1,4 @@
-tutorialProgress++;
-waiting = 1;
+with obj_dummy{
+	tutorialProgress++;
+	waiting = 1;
+}

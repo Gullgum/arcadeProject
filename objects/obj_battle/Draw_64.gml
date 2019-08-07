@@ -148,8 +148,9 @@ case "Attack":
 	if slideTimer == 1{
 		instance_destroy(obj_attackslide);
 		instance_destroy(obj_slider);
-		if target == inst_7892FE32 && obj_dummy.tutorialProgress == 1{
+		if target == inst_7892FE32 && (obj_dummy.tutorialProgress == 1  || obj_dummy.tutorialProgress == 2 || obj_dummy.tutorialProgress == 3){
 			target.waiting = 0;
+
 		}
 		menu = "Menu";
 	}
@@ -159,7 +160,7 @@ break;
 case "Defend":
 	defendTimer--;
 	if defendTimer <= 0{
-		if target == inst_7892FE32 && obj_dummy.tutorialProgress == 2{
+		if target == inst_7892FE32 && (obj_dummy.tutorialProgress == 2){
 			target.waiting = 0;
 		}
 		menu = "Menu"
@@ -186,15 +187,16 @@ case "Flee":
 		ds_list_add(fleeTxt,"Couldn't escape!");
 	}
 	draw_set_color(c_white);
-	if (fleeCheck == 0)
+	if (fleeCheckFinished == 0)
 		draw_text_scrolling(70,685,fleeTxt,30,500,0.5,12,action,0,doFaces,speakers,snds,set_fleeCheck);
-	if fleeCheck == 1{
+	if fleeCheckFinished == 1{
 		if escaped == 0{
 			menu = "Menu";
 		}else if escaped == 1{
 			rectH = min(rectH+4,769);
 			topRectH = max(topRectH-4,-1);
 			if rectH >= 769{
+				target.ranAway = 1;
 				instance_destroy(self);
 			}
 		}

@@ -9,3 +9,4 @@ def = 0;
 maxHp = 15;
 hp = 15;
 xx = 0;
+ranAway = 0;

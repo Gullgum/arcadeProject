@@ -1,1 +1,0 @@
-message[0] = "The sky glows a familiar light-grey.\nJust a day like any other.";

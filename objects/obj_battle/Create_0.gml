@@ -7,7 +7,7 @@ gx = 1;
 slideTimer = 0;
 target = 0;
 escaped = 0;
-fleeCheck = 0;
+fleeCheckFinished = 0;
 sliderSpeed = 5;
 topRectH = 0;
 

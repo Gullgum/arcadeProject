@@ -26,4 +26,5 @@ if action && distance_to_object(obj_player) < 40 && !instance_exists(obj_battle)
 
 if distance_to_point(camW-100,obj_player.targetPosY) < speed{
 	speed = 0;
+	xx = x;
 }

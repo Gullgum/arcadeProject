@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "81ae7406-8a8f-4d71-8bc7-31b28e1efaae",
+            "Value": {
+                "id": "ba907c9b-1b4e-4121-8d39-331353ecb8b6",
+                "resourcePath": "scripts\\exit_battle\\exit_battle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "82183232-d244-4940-a34e-8ce9206593af",
             "Value": {
                 "id": "cb047b04-d5f0-4916-a3ac-8602778e8a5d",

@@ -7,3 +7,4 @@ atk = 3;
 def = 0;
 maxHp = 20;
 xx = x;
+ranAway = 0;
