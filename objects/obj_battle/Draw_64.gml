@@ -96,9 +96,54 @@ case "Attack":
 	if (obj_attackslide.y >= obj_slider.y + 359) dir = -1;
 	else if (obj_attackslide.y <= obj_slider.y) dir = 1;
 	if action && slideTimer <= 0{
-		slideTimer = 90;
+		slideTimer = 130;
 		obj_attackslide.spd = 0;
+		yFloat = 0;
+		with obj_attackslide{
+			var target0 = obj_battle.target;
+			if !place_empty(obj_battle.target.x,y,obj_enemy){
+				hit = true;
+				obj_battle.shake = 15;
+				obj_battle.shakeSlow = 0.5;
+				obj_battle.dmg = random_range((obj_player.atk - target0.def)*0.8,(obj_player.atk - target0.def)*1.1);
+				obj_battle.target.hp -= obj_battle.dmg;
+		}else{
+				hit = false;
+			}
+		}
 	}
+	
+	if obj_attackslide.hit = true{
+		if shakeSpeed == 0{
+			if shakeState == 0{
+				target.x += floor(shake)*shakeAxis;
+				shakeAxis = -shakeAxis;
+				shake = max(0,shake-shakeSlow);
+				shakeState = 1;
+			}else{
+				target.x = target.xx;
+				shakeState = 0;
+			}
+			shakeSpeed = 1;
+		}
+		if (shake == 0) target.x = target.xx;
+		var indicatorX = target.xx;
+		var indicatorY = target.y - target.sprite_height;
+		draw_set_font(fnt_med);
+		draw_set_color(c_red);
+		draw_text(indicatorX,indicatorY-yFloat,string(round(dmg)));
+		yFloat += 0.3;
+		shakeSpeed--;
+	}else if obj_attackslide.hit = false{
+		var indicatorX = target.xx;
+		var indicatorY = target.y - target.sprite_height;
+		draw_set_font(fnt_med);
+		draw_set_color(c_gray);
+		draw_text(indicatorX,indicatorY-yFloat,"Miss");
+		yFloat += 0.3;
+	}
+		
+	
 	slideTimer--;
 	if slideTimer == 1{
 		instance_destroy(obj_attackslide);

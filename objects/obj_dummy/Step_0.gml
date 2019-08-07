@@ -10,6 +10,7 @@ var camH = camera_get_view_height(view_camera[0]);
 if action && distance_to_object(obj_player) < 40 && !instance_exists(obj_battle){
 	var battle = instance_create_depth(0,0,0,obj_battle);
 	battle.target = self;
+	
 	with obj_player{
 		targetPosY = camY + (3*camH/4);
 		targetPosX = camX + 100; 
@@ -49,4 +50,12 @@ if instance_exists(obj_battle){
 }
 if distance_to_point(camW-100,obj_player.targetPosY) < speed{
 	speed = 0;
+	xx = x;
+}
+
+if hp <= 0{
+	image_alpha -= 0.01;
+	if image_alpha <= 0{
+		instance_destroy();
+	}
 }

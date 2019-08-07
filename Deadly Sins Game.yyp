@@ -1063,6 +1063,14 @@
             }
         },
         {
+            "Key": "fb930b79-2d04-4d32-ac69-8b9b49b1b7af",
+            "Value": {
+                "id": "7ac78b60-5546-49ef-a078-2715715d32bc",
+                "resourcePath": "sprites\\spr_dummymask\\spr_dummymask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fc1f02d4-1fcd-4046-bf3d-93b0c6014671",
             "Value": {
                 "id": "4b7fa785-8664-4507-9fb2-86473f3bacd1",
