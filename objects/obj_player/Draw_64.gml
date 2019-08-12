@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Debugging
 get_input();
 /*draw_text(10,10,"xmovedir: " + string(xmoveDir))
 draw_text(10,50,"rkey: " + string(rKey));

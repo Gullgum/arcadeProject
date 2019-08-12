@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Collision with trigger
 // You can write your code in this editor
 timeline_index = obj_cutscenetrigger.timeline;
 timeline_running = 1;

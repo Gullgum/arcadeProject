@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this edito
+/// @description Menu selection
+
 get_input();
 
 if !instance_exists(obj_battletext){

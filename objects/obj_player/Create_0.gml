@@ -1,5 +1,5 @@
+/// @desc Intialise variables
 
-/// @desc Intialize
 //Movement and other
 spd = 10;
 hspd = 0;
@@ -9,7 +9,7 @@ dir = 0;
 state = move_state;
 stepcooldown = 0;
 cutscene = 0;
-
+exitBattle = 0;
 //Camera setup
 default_cam = camera_create_view(x - 512,y - 384, view_wport[0], view_hport[0], 0, obj_player, -1, -1, 512, 384);
 view_camera[0] = default_cam;
@@ -24,6 +24,9 @@ atk = 5;
 maxHp = 20;
 hp = 20;
 def = 2;
+
+xPrev = x;
+yPrev = x;
 
 inventory = [0,0,0,0,0,0,0,0];
 

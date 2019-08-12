@@ -5,3 +5,4 @@ doFace[0] = 0;
 tSound[0] = 0;
 script = 0;
 speaker[0] = 0;
+depth = -10000;

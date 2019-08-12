@@ -1,3 +1,2 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Step sound effect cooldown
 stepcooldown = 0;

@@ -1,6 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Battle Graphics & GUI
 
+draw_set_alpha(1);
 var camH = camera_get_view_height(view_camera[0]);
 //Empty lists
 var snds = ds_list_create();
@@ -58,7 +58,7 @@ if rectH = (maxHeight){
 		if (gx == 1 && action) menu = "Attack";
 		if (gx == 5 && action){
 			escaped = 0;
-			fleeCheck = 0;
+			fleeCheckFinished = 0;
 			if random(1) <= target.escapeChance{
 				escaped = 1;
 			}
@@ -67,6 +67,7 @@ if rectH = (maxHeight){
 		if (gx == 3 && action){
 			defendTimer = 120;
 			menu = "Defend";
+			instance_create_layer(0,0,"Backdrop",obj_backdrop);
 		}	
 	}
 	
@@ -131,7 +132,7 @@ case "Attack":
 		var indicatorY = target.y - target.sprite_height;
 		draw_set_font(fnt_med);
 		draw_set_color(c_red);
-		draw_text(indicatorX,indicatorY-yFloat,string(round(dmg)));
+		draw_text(indicatorX,indicatorY-yFloat,string(round(dmg*10)));
 		yFloat += 0.3;
 		shakeSpeed--;
 	}else if obj_attackslide.hit = false{
@@ -158,8 +159,21 @@ case "Attack":
 break;
 
 case "Defend":
+	draw_set_color(c_black);
+	draw_rectangle(0,rectH,1024,768,0);
+	draw_set_color(c_white);
+	draw_rectangle(-1,rectH,1024,768,1)
+	var maxHeight = 5*camH/6;
+	rectH = min(rectH + 5,769);
+
+	draw_set_color(c_black);
+	draw_rectangle(0,0,1024,topRectH,0);
+	var topMaxHeight = camH/6;
+	topRectH = max(topRectH-5,-1);
+
 	defendTimer--;
 	if defendTimer <= 0{
+		obj_backdrop.imgAlpha -= 0.07;
 		if target == inst_7892FE32 && (obj_dummy.tutorialProgress == 2){
 			target.waiting = 0;
 		}
@@ -193,12 +207,7 @@ case "Flee":
 		if escaped == 0{
 			menu = "Menu";
 		}else if escaped == 1{
-			rectH = min(rectH+4,769);
-			topRectH = max(topRectH-4,-1);
-			if rectH >= 769{
-				target.ranAway = 1;
-				instance_destroy(self);
-			}
+			obj_player.exitBattle = 1;
 		}
 	}
 

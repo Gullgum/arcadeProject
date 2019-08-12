@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Dummy-specific step code
+
 get_input();
 depth = -y;
 var camX = camera_get_view_x(view_camera[0]);
@@ -12,17 +12,23 @@ if action && distance_to_object(obj_player) < 40 && !instance_exists(obj_battle)
 	battle.target = self;
 	
 	with obj_player{
-		targetPosY = camY + (3*camH/4);
+		targetPosY = obj_dummy.pTargetY;
 		targetPosX = camX + 100; 
 		image_speed = 0;
 		image_index = 0;
 		sprite_index = RIGHT;
 		spd = 0;
+		hspd = 0;
+		vspd = 0;
+		xPrev = camX + 150;
+		yPrev = y;
 		direction = point_direction(x,y,targetPosX,targetPosY);
-		speed = distance_to_point(targetPosX,targetPosY) / 30;
+		speed = point_distance(x,y,targetPosX,targetPosY) / 25;
 	}
+	xPrev = x;
+	yPrev = y;
 	direction = point_direction(x,y,camW - 100,obj_player.targetPosY);
-	speed = distance_to_point(camW - 100, obj_player.targetPosY) / 30;
+	speed = point_distance(x,y,camW - 100, obj_player.targetPosY) / 25;
 
 }
 
@@ -61,16 +67,18 @@ if instance_exists(obj_battle){
 
 	}
 }
-if distance_to_point(camW-100,obj_player.targetPosY) < speed{
+if (point_distance(x,y,camW-100,obj_player.targetPosY) < speed) && (x != camW -100 && y != obj_player.targetPosY){
 	speed = 0;
 	xx = x;
+	y = obj_player.targetPosY;
+	x = camW-100;
 }
-
+/*
 if hp <= 0{
 	image_alpha -= 0.01;
 }
-
-if !instance_exists(obj_battle) && hp > 0 && ranAway == 1{
+*/
+if !instance_exists(obj_battle) && hp > 0 && ranAway == 1 && obj_player.exitBattle == 0 {
 	var box = instance_create_depth(0,0,0,obj_textbox);
 	box.message = ["Oh, you just ran away.","A valid strategy, but it won't always work.","Feel free to come back here if you ever want to practice."];
 	ranAway = 0;

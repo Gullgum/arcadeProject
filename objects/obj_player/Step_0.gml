@@ -6,18 +6,23 @@ depth = -y;
 if keyboard_check_pressed(ord("L")) {
 	game_restart();
 }
-//fullscreen
-if room != rm_1{
-	if keyboard_check_pressed(vk_f4){
-		var full = window_get_fullscreen();
-		switch (full){
-			case 1: window_set_fullscreen(0); break;
-			case 0: window_set_fullscreen(1); break;
-		}
+//Fullscreen toggle
+if keyboard_check_pressed(vk_f4){
+	var full = window_get_fullscreen();
+	switch (full){
+		case 1: window_set_fullscreen(0); break;
+		case 0: window_set_fullscreen(1); break;
 	}
 }
 //Movement
-if !instance_exists(obj_battle) && cutscene == 0 && !instance_exists(obj_fade) && !instance_exists(obj_fademenu) && !instance_exists(obj_textbox){
+//Check if the player is allowed to move
+if !instance_exists(obj_battle)
+	&& exitBattle == 0 
+	&& cutscene == 0 
+	&& !instance_exists(obj_fade) 
+	&& !instance_exists(obj_fademenu) 
+	&& !instance_exists(obj_textbox){
+	//Execute the move_state script
 	script_execute(state);
 }
 
@@ -44,9 +49,13 @@ if (y < 1120 && timeline_index == tml_park && timeline_running == 0) {
 }
 
 if instance_exists(obj_battle){
-	if (x == targetPosX && y == targetPosY) || (distance_to_point(targetPosX,targetPosY) < speed){
+	if (x == targetPosX && y == targetPosY) || (point_distance(x,y,targetPosX,targetPosY) < speed){
 		speed = 0;
 		image_speed = 0;
 		image_index = 0;
 	}
+}
+
+if exitBattle == 1{
+	exit_battle();
 }

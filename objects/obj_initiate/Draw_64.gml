@@ -15,7 +15,7 @@ if room == room0{
 	ds_list_add(sounds,0);
 	var text = ds_list_create();	
 	ds_list_add(text,"I still believe that in the ashes of the \nold days, we will create a brighter world.")
-	if ((keyboard_check_pressed(ord("X"))) || action)/* && (!instance_exists(obj_fade)) && (!instance_exists(obj_fademenu))*/ fademenu(rm_1,c_black,0.02);
+	if ((keyboard_check_pressed(ord("X"))) || action)/* && (!instance_exists(obj_fade)) && (!instance_exists(obj_fademenu))*/ fademenu(rm_menu,c_black,0.02);
 	var key_advance = 0;
 	var key_skip = 0;
 	draw_set_halign(fa_center);
