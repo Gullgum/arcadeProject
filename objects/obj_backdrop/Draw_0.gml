@@ -8,4 +8,6 @@ if (obj_battle.menu = "Defend")
 	imgAlpha = min(imgAlpha+0.02,0.6);
 else 
     imgAlpha = max(imgAlpha-0.02,-0.2);
+	
+draw_set_alpha(1);
  

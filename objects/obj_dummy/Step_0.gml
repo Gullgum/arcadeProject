@@ -33,6 +33,7 @@ if action && distance_to_object(obj_player) < 40 && !instance_exists(obj_battle)
 }
 
 if instance_exists(obj_battle){
+	mask_index = spr_dummymask;
 	if obj_battle.topRectH >= 128 && !instance_exists(obj_battletext) && waiting == 0 && tutorialProgress <= 3{
 		var txt = instance_create_depth(0,0,-100,obj_battletext);
 		switch tutorialProgress{
@@ -66,6 +67,8 @@ if instance_exists(obj_battle){
 		}
 
 	}
+}else{
+	mask_index = spr_dummy;
 }
 if (point_distance(x,y,camW-100,obj_player.targetPosY) < speed) && (x != camW -100 && y != obj_player.targetPosY){
 	speed = 0;

@@ -19,3 +19,5 @@ shakeAxis = 1;
 yFloat = 0;
 shakeSpeed = 0;
 shakeState = 0;
+
+defenseFade = 0;
