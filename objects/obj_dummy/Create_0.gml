@@ -19,3 +19,5 @@ xPrev = x;
 yPrev = y;
 
 pTargetY = camY + (3*camH/4);
+attackDelay = 0;
+attack = dummy_attack1;

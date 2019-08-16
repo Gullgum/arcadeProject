@@ -14,3 +14,5 @@ xx = x;
 ranAway = 0;
 
 pTargetY = camY + (3*camH/4);
+
+attackDelay = 0;

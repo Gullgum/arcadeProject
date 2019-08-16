@@ -11,7 +11,7 @@ fleeCheckFinished = 0;
 sliderSpeed = 5;
 topRectH = 0;
 
-defendTimer = 0;
+global.defendTimer = 0;
 shake = 0;
 shakeSlow = 0;
 dmg = 0;
@@ -21,3 +21,4 @@ shakeSpeed = 0;
 shakeState = 0;
 
 defenseFade = 0;
+atkFinished = 0;

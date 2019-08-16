@@ -81,7 +81,8 @@ case "Menu":
 		//If "Defend" is selected
 		if (gx == 3 && action){
 			defenseFade = 0;
-			defendTimer = 120;
+			global.defendTimer = 120;
+			atkFinished = 0;
 			menu = "Defend";
 			//Fade the background to darkness
 			instance_create_layer(0,0,"Backdrop",obj_backdrop);
@@ -202,12 +203,19 @@ case "Defend":
 	draw_set_color(c_white);
 	draw_rectangle(-1,rectH,1024,768,1)
 	var maxHeight = 5*camH/6;
-	rectH = min(rectH + 5,769);
-
+	if global.defendTimer > 0{
+		rectH = min(rectH + 5,769);
+	}else{
+		rectH = max(rectH - 2.5,maxHeight);
+	}
 	draw_set_color(c_black);
 	draw_rectangle(0,0,1024,topRectH,0);
 	var topMaxHeight = camH/6;
-	topRectH = max(topRectH-5,-1);
+	if global.defendTimer > 0{
+		topRectH = max(topRectH - 5, -1)
+	}else{
+		topRectH = min(topRectH + 2.5,topMaxHeight);
+	}
 	//Draw the defense GUI
 	draw_set_alpha(defenseFade);
 	draw_sprite(spr_zButton,0,336,570);
@@ -218,20 +226,26 @@ case "Defend":
 		instance_create_depth(512,500,0,obj_defense_thing);
 		instance_create_depth(644,500,0,obj_defense_thing);
 	}
-	obj_defense_thing.image_alpha = defenseFade;
+//	obj_defense_thing.image_alpha = defenseFade;
 	defenseFade = min(defenseFade+0.02,1)
 	
 	draw_set_alpha(1);
-	
-	defendTimer--;
-	if defendTimer <= 0{
+	if obj_defense_thing.barAlpha >= 1{
+		var script = target.attack;
+		script_execute(script);
+
+	}
+	if global.defendTimer > 0 && atkFinished == 1{
+		global.defendTimer--;
+	}
+	if global.defendTimer <= 0{
 		if (instance_exists(obj_backdrop))
-			obj_backdrop.imgAlpha -= 0.04;
+			obj_backdrop.imgAlpha -= 0.02;
 		defenseFade -= 0.05;
 		if target == inst_7892FE32 && (obj_dummy.tutorialProgress == 2){
 			target.waiting = 0;
 		}
-		if (defenseFade <= 0.5)
+		if (obj_defense_thing.image_alpha <= 0)
 			menu = "Menu";
 		
 	}
