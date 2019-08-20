@@ -1,9 +1,10 @@
-/// @description Battle Graphics & GUI
+/// @description Battle Graphics, Scripting & GUI
 
 //Set the draw opacity to full
 draw_set_alpha(1);
 //Store the camera's height
 var camH = camera_get_view_height(view_camera[0]);
+var camW = camera_get_view_width(view_camera[0]);
 //Empty lists for text script
 var snds = ds_list_create();
 var doFaces = ds_list_create();
@@ -191,7 +192,9 @@ case "Attack":
 			//Trigger the next tutorial stage
 			target.waiting = 0;
 		}
-		menu = "Menu";
+		if (target == inst_7892FE32) && (obj_dummy.tutorialProgress == 1)
+			menu = "Menu";
+		else menu = "Attack";
 	}
 	
 break;
@@ -218,14 +221,34 @@ case "Defend":
 	}
 	//Draw the defense GUI
 	draw_set_alpha(defenseFade);
-	draw_sprite(spr_zButton,0,336,570);
-	draw_sprite(spr_xButton,0,468,570);
-	draw_sprite(spr_cButton,0,600,570);
+	
+	if keyboard_check(ord("Z")) var zState = 1;
+	else var zState = 0;
+	
+	if keyboard_check(ord("X")) var xState = 1;
+	else var xState = 0;
+	
+	if keyboard_check(ord("C")) var cState = 1;
+	else var cState = 0;
+	
+	draw_sprite(spr_zButton,zState,336,570);
+	draw_sprite(spr_xButton,xState,468,570);
+	draw_sprite(spr_cButton,cState,600,570);
 	if !instance_exists(obj_defense_thing){
-		instance_create_depth(380,500,0,obj_defense_thing);
-		instance_create_depth(512,500,0,obj_defense_thing);
-		instance_create_depth(644,500,0,obj_defense_thing);
+		var def1 = instance_create_depth(380,500,0,obj_defense_thing);
+		var def2 = instance_create_depth(512,500,0,obj_defense_thing);
+		var def3 = instance_create_depth(644,500,0,obj_defense_thing);
+		obj_defense_thing.x1 = def1.x;
+		obj_defense_thing.x2 = def2.x;
+		obj_defense_thing.x3 = def3.x;
 	}
+	
+	draw_set_color(c_red);
+	draw_rectangle(camW/2 - 75,camH-65,camW/2 + 75,camH-90,0);
+	draw_set_color(c_green);
+	var bar = max((((camW/2)-75) + (150*(obj_player.hp/obj_player.maxHp))),camW/2 - 75)
+	draw_rectangle(camW/2 - 75,camH-65,bar,camH-90,0);
+	
 //	obj_defense_thing.image_alpha = defenseFade;
 	defenseFade = min(defenseFade+0.02,1)
 	
@@ -247,6 +270,7 @@ case "Defend":
 		}
 		if (obj_defense_thing.image_alpha <= 0)
 			menu = "Menu";
+			target.attackDelay = 0;
 		
 	}
 break;

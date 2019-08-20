@@ -5,3 +5,4 @@ var alpha = obj_battle.defenseFade;
 if (image_alpha <= 0) instance_destroy();
 draw_set_alpha(image_alpha);
 draw_self();
+

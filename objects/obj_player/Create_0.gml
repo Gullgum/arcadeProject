@@ -24,6 +24,7 @@ atk = 5;
 maxHp = 20;
 hp = 20;
 def = 2;
+invincible = 0;
 
 xPrev = x;
 yPrev = x;

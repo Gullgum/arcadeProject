@@ -1,5 +1,5 @@
 /// @description Menu selection
-
+//GUI x axis control
 get_input();
 
 if !instance_exists(obj_battletext){

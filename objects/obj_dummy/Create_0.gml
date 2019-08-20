@@ -9,7 +9,7 @@ escapeChance = 1;
 tutorialProgress = 0;
 waiting = 0;
 
-atk = 1;
+atk = 2;
 def = 0;
 maxHp = 15;
 hp = 15;

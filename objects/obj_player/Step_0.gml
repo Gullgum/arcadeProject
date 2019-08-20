@@ -59,3 +59,5 @@ if instance_exists(obj_battle){
 if exitBattle == 1{
 	exit_battle();
 }
+
+invincible = max(invincible-1,0);
