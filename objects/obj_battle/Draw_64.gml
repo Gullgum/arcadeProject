@@ -2,6 +2,7 @@
 
 //Set the draw opacity to full
 draw_set_alpha(1);
+draw_set_halign(fa_left);
 //Store the camera's height
 var camH = camera_get_view_height(view_camera[0]);
 var camW = camera_get_view_width(view_camera[0]);
@@ -85,7 +86,10 @@ case "Menu":
 			global.defendTimer = 120;
 			atkFinished = 0;
 			menu = "Defend";
+			prevHp = obj_player.hp;
+			perfect = 0;
 			//Fade the background to darkness
+			instance_destroy(obj_backdrop);
 			instance_create_layer(0,0,"Backdrop",obj_backdrop);
 		}	
 	}
@@ -194,7 +198,17 @@ case "Attack":
 		}
 		if (target == inst_7892FE32) && (obj_dummy.tutorialProgress == 1)
 			menu = "Menu";
-		else menu = "Attack";
+		else{
+			defenseFade = 0;
+			global.defendTimer = 120;
+			atkFinished = 0;
+			menu = "Defend";
+			prevHp = obj_player.hp;
+			perfect = 0;
+			//Fade the background to darkness
+			instance_destroy(obj_backdrop);
+			instance_create_layer(0,0,"Backdrop",obj_backdrop);
+		}
 	}
 	
 break;
@@ -255,10 +269,28 @@ case "Defend":
 	draw_set_alpha(1);
 	if obj_defense_thing.barAlpha >= 1{
 		var script = target.attack;
+		//Put this somewhere else prevHp = obj_player.hp;
 		script_execute(script);
 
 	}
 	if global.defendTimer > 0 && atkFinished == 1{
+		if (prevHp == obj_player.hp  && perfect == 0){
+			if prevHp != obj_player.maxHp
+				obj_player.hp = min(obj_player.maxHp,obj_player.hp+1);
+			perfect = 1;
+			yFloat = 0;
+		}
+		
+		if perfect == 1{
+			draw_set_color(c_yellow);
+			draw_set_alpha(1);
+			draw_set_halign(fa_center);
+			var xPos = 512;
+			var yPos = camH-170+yFloat;
+			//The outline
+			draw_text_outline(xPos,yPos,"Perfect!",c_black,c_yellow,1);
+			yFloat -= 0.5;
+		}
 		global.defendTimer--;
 	}
 	if global.defendTimer <= 0{
@@ -268,13 +300,12 @@ case "Defend":
 		if target == inst_7892FE32 && (obj_dummy.tutorialProgress == 2){
 			target.waiting = 0;
 		}
-		if (obj_defense_thing.image_alpha <= 0)
+		if (obj_defense_thing.image_alpha <= 0) && (atkFinished == 1){
 			menu = "Menu";
 			target.attackDelay = 0;
-		
+		}
 	}
 break;
-
 
 case "Flee":
 	draw_set_color(c_black);
@@ -304,6 +335,5 @@ case "Flee":
 			obj_player.exitBattle = 1;
 		}
 	}
-
 	break;
 }

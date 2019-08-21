@@ -26,7 +26,8 @@ shakeAxis = 1;
 dmg = 0;
 
 yFloat = 0;
-
+prevHp = obj_player.hp;
+perfect = 0;
 
 //Fade in the defense GUI
 defenseFade = 0;

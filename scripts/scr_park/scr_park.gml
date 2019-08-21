@@ -14,9 +14,7 @@ box.doFace[2] = spr_jimface;
 box.doFace[3] = false;
 box.doFace[4] = spr_jimface;
 
-box.tSound[0] = stepsound;
-box.tSound[1] = stepsound;
-box.tSound[2] = stepsound;
+box.tSound[0] = 0;
 
 var scr = scr_pantoplayer;
 box.script = scr;

@@ -1,4 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Init.
+
 yFloat = 0;
 dmgDealt = 0;
+blocked = 0;

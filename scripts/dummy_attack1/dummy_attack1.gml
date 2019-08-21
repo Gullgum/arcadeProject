@@ -32,9 +32,6 @@ if (projSpawn != 0)
 projSpawn = 0;
 
 
-
-
-
-if target.attackDelay >= 120{
+if !instance_exists(obj_projectile){
 	atkFinished = 1;
 }

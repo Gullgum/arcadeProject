@@ -17,7 +17,3 @@ if global.defendTimer <= 0{
 
 
 
-
-
-//16
-//26
