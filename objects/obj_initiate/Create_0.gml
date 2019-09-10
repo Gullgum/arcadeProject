@@ -11,3 +11,4 @@ doFace[0] = 0;
 tSound[0] = 0;
 speaker[0] = 0;
 depth = -999;
+drawAlpha = 1;

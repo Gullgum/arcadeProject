@@ -22,7 +22,7 @@ if room == rm_menu{
 		gy--;
 	}
 	if gy == 1 && action && !instance_exists(obj_fademenu) && !instance_exists(obj_fade) {
-		fademenu(room0,c_black,0.02);
+		fademenu(rm_1,c_black,0.02);
 		audio_sound_gain(mus_menu,0,2000);
 	}
 	if gy == 3 && action && !instance_exists(obj_fademenu) && !instance_exists(obj_fade) {

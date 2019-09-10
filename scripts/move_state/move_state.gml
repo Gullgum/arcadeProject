@@ -5,9 +5,9 @@
 //Max speed will be determined by whether the player is holding X (run) or not. 
 //Player will accelerate if not already at top speed. 
 if keyboard_check(ord("X")) {
-	spd = min(len+0.75,10);
+	spd = min(len+1,10);
 }else{
-	spd = min(len + 0.75,5);
+	spd = min(len+1,5);
 }
 //Hold the direction value (dir) from the previous frame in a local variable.
 var dirPrev = dir;

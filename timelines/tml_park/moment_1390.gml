@@ -9,3 +9,4 @@ with obj_player{
 }
 
 obj_guard.speed = 5;
+obj_guard.direction = 270;

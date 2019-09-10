@@ -88,6 +88,7 @@ case "Menu":
 			menu = "Defend";
 			prevHp = obj_player.hp;
 			perfect = 0;
+			obj_player.def += 3;
 			//Fade the background to darkness
 			instance_destroy(obj_backdrop);
 			instance_create_layer(0,0,"Backdrop",obj_backdrop);
@@ -303,6 +304,7 @@ case "Defend":
 		if (obj_defense_thing.image_alpha <= 0) && (atkFinished == 1){
 			menu = "Menu";
 			target.attackDelay = 0;
+			obj_player.def -= 3;
 		}
 	}
 break;

@@ -1,3 +1,4 @@
+///@desc End
 with obj_player{
 	speed = 0;
 	image_speed = 0;

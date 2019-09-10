@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "5afed3bb-93c5-4355-8af7-7d670e7f05c3",
+            "Value": {
+                "id": "a376b5bd-7458-415e-af37-b9b0dc043207",
+                "resourcePath": "objects\\obj_guard\\obj_guard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5fdedbde-c105-453b-8591-b3695203ec57",
             "Value": {
                 "id": "bcf5b68b-05b1-4830-a44e-bbbb30792246",
@@ -799,6 +807,14 @@
             }
         },
         {
+            "Key": "a3b8e079-0a12-45fe-be89-c5fec5a4826a",
+            "Value": {
+                "id": "5b6cd007-7544-4079-bf21-3c8c7c8185b5",
+                "resourcePath": "rooms\\rm_gameover\\rm_gameover.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "a5c07cb8-c840-469c-8f7f-46adcf851e79",
             "Value": {
                 "id": "4d023fee-0c67-48c3-97f2-6b6a94bf2752",
@@ -831,6 +847,14 @@
             }
         },
         {
+            "Key": "ad2024c1-c762-4cbe-813e-bad60d09c7ff",
+            "Value": {
+                "id": "e1a987ea-1061-409a-a9fe-7c65d3c9dac1",
+                "resourcePath": "rooms\\rm_tip1\\rm_tip1.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "af798d33-a9e6-42b8-b136-530b61251af2",
             "Value": {
                 "id": "e9b1252e-8908-4d9d-84fa-538de4f580fe",
@@ -844,6 +868,14 @@
                 "id": "94119bb0-34ca-42cb-9fca-0011731ea5a1",
                 "resourcePath": "sounds\\mus_menu\\mus_menu.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "b27f1932-3cb4-4a0c-a42d-4adeadfa2ec8",
+            "Value": {
+                "id": "59c9a433-41ba-4211-a3fd-abff17f247b8",
+                "resourcePath": "sprites\\spr_bodyguard\\spr_bodyguard.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

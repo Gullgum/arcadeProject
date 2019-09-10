@@ -29,8 +29,10 @@ invincible = 0;
 xPrev = x;
 yPrev = x;
 
+//Array for the player's inventory, default is empty.
 inventory = [0,0,0,0,0,0,0,0];
 
+//These variables act as constants and won't change.
 #macro RIGHT spr_player_white;
 
 #macro DOWN spr_player_down;

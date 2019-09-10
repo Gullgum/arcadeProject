@@ -1,3 +1,4 @@
+///@desc Pause timeline, execute script
 scr_park();
 obj_player.timeline_running = 0;
 

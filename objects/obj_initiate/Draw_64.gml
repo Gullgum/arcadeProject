@@ -15,7 +15,7 @@ if room == room0{
 	ds_list_add(sounds,0);
 	var text = ds_list_create();	
 	ds_list_add(text,"I still believe that in the ashes of the \nold days, we will create a brighter world.")
-	if ((keyboard_check_pressed(ord("X"))) || action)/* && (!instance_exists(obj_fade)) && (!instance_exists(obj_fademenu))*/ fademenu(rm_menu,c_black,0.02);
+	if ((keyboard_check_pressed(ord("X"))) || action)  fademenu(rm_ctrl,c_black,0.02);
 	var key_advance = 0;
 	var key_skip = 0;
 	draw_set_halign(fa_center);
@@ -61,8 +61,21 @@ if room == rm_ctrl{
 	draw_set_color(c_white);
 	draw_set_font(fnt_med);
 	draw_set_halign(fa_left);
-	draw_text(120,50,"Controls \n------------------------------------ \nUse arrow keys to move\nZ - Interact with objects, Select, \n      Progress dialogue\nX - Cancel, Go back, Skip dialogue text, \n		       Run (hold)\nC - Open/close menu\nPress F4 to toggle fullscreen mode\n------------------------------------\n\nPress X to return to menu");
-	if skipKey {
+	draw_text(120,50,"Controls \n------------------------------------ \nUse arrow keys to move\nZ - Action key \n      \nX - Cancel, Skip, Run(hold) \n\nC - Open/close menu\nPress F4 to toggle fullscreen mode\n------------------------------------\n\nPress Z to go to menu");
+	if skipKey || action {
 		fademenu(rm_menu,c_black,0.1);	
 	}
+}
+
+if room == rm_gameover{
+	draw_set_alpha(drawAlpha);
+	drawAlpha = min(drawAlpha+0.008,1);
+	draw_set_color(c_white);
+	draw_set_halign(fa_center);
+	draw_set_font(fnt_title);
+	draw_text(512,200,"Game Over");
+	draw_set_font(fnt_startsmall);
+	draw_text(512,500,"Press Z to restart");
+	if (action)
+		game_restart();
 }

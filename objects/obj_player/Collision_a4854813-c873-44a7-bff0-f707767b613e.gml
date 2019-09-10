@@ -1,7 +1,7 @@
 /// @description Collision with trigger
-// You can write your code in this editor
-timeline_index = obj_cutscenetrigger.timeline;
+
+// Destroy the trigger instance and begin a define timeline.
+timeline_index = other.timeline;
 timeline_running = 1;
-with other{
-	instance_destroy();
-}
+timeline_position = 0;
+instance_destroy(other);

@@ -18,6 +18,7 @@ if blocked == 1{
 	draw_set_color(c_green);
 	draw_text(x-30,yFloat+440,"Nice!");
 	yFloat -= 1;
+	spd = 0;
 	image_alpha = max(0,image_alpha-0.1);
 	image_xscale += 0.2;
 	image_yscale += 0.2;

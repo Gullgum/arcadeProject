@@ -1,6 +1,7 @@
 /// @description Every frame
 // You can write your code in this editor
 get_input();
+//This allows for dynamic depth - i.e. objects will draw in front of others depending on their position.
 depth = -y;
 //Return to menu
 if keyboard_check_pressed(ord("L")) {
@@ -40,11 +41,11 @@ if (room = rm_4) && !timeline_running && (rKey||lKey||uKey||dKey) && stepcooldow
 		alarm[0] = 30;
 	}
 }
-
+//Timeline Controller for cutscenes - might move to a separate script later
 if (y < 1120 && timeline_index == tml_park && timeline_running == 0) {
 	y = 1121;
 	speed = 0;
-	timeline_position = 690;
+	timeline_position = 600;
 	timeline_running = 1;
 }
 
@@ -61,3 +62,11 @@ if exitBattle == 1{
 }
 
 invincible = max(invincible-1,0);
+
+if hp <= 0{
+	if (room != rm_gameover) room_goto(rm_gameover);
+}
+
+if room == rm_gameover{
+	instance_destroy();
+}

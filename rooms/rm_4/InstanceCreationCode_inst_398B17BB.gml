@@ -6,6 +6,7 @@ message = ["What a miserable tyrant that Jim is! Someone oughta stop him! \nI wo
 "You? But you're just a kid!",
 "I don't see anyone else stepping up.",
 "Fair point, they're all too afraid. Jim doesn't fool around with this stuff.",
-"Tell you what, I'll teach you how to fight. I was a black belt at Karate back in the day, you know."]
+"Tell you what, I'll teach you how to fight. I was a black belt at Karate back in the day, you know.",
+"Come with me."];
 
 script = scr_fade_to_tip;
