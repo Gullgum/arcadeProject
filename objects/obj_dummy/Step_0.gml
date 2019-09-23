@@ -77,7 +77,7 @@ if (point_distance(x,y,camW-100,obj_player.targetPosY) < speed) && (x != camW -1
 	x = camW-100;
 }
 
-if !instance_exists(obj_battle) && hp > 0 && ranAway == 1 && obj_player.exitBattle == 0 {
+if room == rm_tip && !instance_exists(obj_battle) && hp > 0 && ranAway == 1 && obj_player.exitBattle == 0 {
 	var box = instance_create_depth(0,0,0,obj_textbox);
 	box.message = ["Oh, you just ran away.","A valid strategy, but it won't always work.","Feel free to come back here if you ever want to practice."];
 	ranAway = 0;
