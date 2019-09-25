@@ -50,7 +50,15 @@ if room == rm_menu{
 	draw_set_font(fnt_med);
 	if gy == 1 draw_set_colour(c_yellow) else draw_set_colour(c_white);
 	draw_text(512, 290, "New Game");
-	if gy == 2 draw_set_colour(c_yellow) else draw_set_color($b6b7ba);
+	if gy == 2{
+		draw_set_colour(c_yellow)
+	}else{
+		if !file_exists("save_0.dat"){
+			draw_set_colour($b6b7ba);
+		}else{
+			draw_set_colour(c_white);
+		}
+	}
 	draw_text(512, 360, "Continue");
 	if gy == 3 draw_set_colour(c_yellow) else draw_set_colour(c_white);
 	draw_text(512, 430, "Controls");
