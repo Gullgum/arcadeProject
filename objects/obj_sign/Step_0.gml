@@ -4,6 +4,8 @@ get_input();
 //If the player is within range of the sign, there is no pre-existing textbox and the action key is pressed, run this code.
 if action && (distance_to_object(obj_player) < 40) && !instance_exists(obj_textbox) {
 //Find any instance of the "Exclamation Mark" object and destroy it if nearby.
+/*This means if a player interacts with an object/character with an 
+exclamation mark, it will be removed. */
 	if instance_exists(obj_exc_mark){
 		var nearExc = instance_nearest(x,y,obj_exc_mark);
 		if (distance_to_object(nearExc) < 50)

@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Initialise Variables
 begin_text = 0;
 can_start_text = 0;
 can_alarm_0 = 1;
