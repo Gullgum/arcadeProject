@@ -2,7 +2,7 @@
 // You can write your code in this editor
 get_input();
 
-if action && (distance_to_object(obj_player) < 80) && !instance_exists(obj_textbox){
+if action && (distance_to_object(obj_player) < 40) && !instance_exists(obj_textbox){
 	global.Save = true;
 	game_save("save_0.dat");
 	var box = instance_create_depth(0,0,0,obj_textbox);
